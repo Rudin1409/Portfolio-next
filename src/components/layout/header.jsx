@@ -11,10 +11,9 @@ const navLinks = [
   { href: "#contact", label: "Contact" },
 ];
 
-const ZLogo = () => (
+const MLogo = () => (
     <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M6 4H18L12 12L18 20H6" stroke="hsl(var(--primary))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M6 12H12" stroke="hsl(var(--primary))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M4 20V4L12 14L20 4V20" stroke="hsl(var(--primary))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
 )
 
@@ -42,7 +41,7 @@ export function Header() {
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
             <Link href="#home" className="flex items-center gap-2 cursor-target">
                 <div className="hidden md:block">
-                    <ZLogo />
+                    <MLogo />
                 </div>
                 <div className="flex flex-col text-center md:text-left">
                     <span className="text-lg md:text-xl font-bold text-foreground tracking-wider font-headline">M. BAHRUDIN</span>
@@ -61,7 +60,7 @@ export function Header() {
         
         <div className="md:hidden flex-1">
              <Link href="#home" className="flex items-center gap-2 cursor-target">
-                <ZLogo />
+                <MLogo />
             </Link>
         </div>
         <div className="md:hidden">

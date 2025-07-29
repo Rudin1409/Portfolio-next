@@ -10,7 +10,7 @@ import TargetCursor from '@/components/TargetCursor';
 import Lightning from '@/components/Lightning';
 
 const metadata = {
-  title: 'Bahrudin | Portfolio',
+  title: 'Rudin-Portfolio',
   description: 'M. Bahrudin, a passionate web and AI developer.',
 };
 
