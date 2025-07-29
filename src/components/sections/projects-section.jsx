@@ -1,49 +1,58 @@
+"use client";
+
 import { ProjectCard } from "@/components/project-card";
+import { Fade } from "react-awesome-reveal";
 
 const projects = [
   {
-    title: "CyberNetix Dashboard",
-    description: "An advanced analytics dashboard for a futuristic cybersecurity firm, built with React and D3.js.",
+    title: "E-commerce",
+    description: "An e-commerce platform with features like product listing, shopping cart, and checkout. Built with React and Firebase.",
     imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "cyberpunk dashboard",
-    projectUrl: "#",
+    imageHint: "online shopping",
+    projectUrl: "https://zain-ecommerce.vercel.app/",
+    githubUrl: "https://github.com/ZainAhmadF28/zain-ecommerce",
   },
   {
-    title: "Project Singularity",
-    description: "A decentralized social media platform empowering users with data ownership, using Next.js and blockchain.",
+    title: "Food App",
+    description: "A food delivery application that allows users to browse restaurants, view menus, and place orders. Developed using the MERN stack.",
     imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "abstract network",
+    imageHint: "food delivery",
     projectUrl: "#",
+    githubUrl: "https://github.com/ZainAhmadF28/food-app",
   },
   {
-    title: "QuantumLeap E-commerce",
-    description: "A cutting-edge online store for a tech gadget company, featuring 3D product previews and a seamless checkout experience.",
+    title: "Chat App",
+    description: "A real-time chat application enabling users to send messages, create groups, and share media. Built with Socket.io and Node.js.",
     imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "futuristic shopping",
+    imageHint: "chat application",
     projectUrl: "#",
+    githubUrl: "https://github.com/ZainAhmadF28/zain-chat-app",
   },
-  {
-    title: "Aetherium Landing Page",
-    description: "A visually striking landing page for a SaaS product, focused on high conversion rates and animated with GSAP.",
+   {
+    title: "Blog App",
+    description: "A full-featured blog platform where users can create, edit, and delete posts, as well as comment on others' articles. MERN stack.",
     imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "minimalist landing page",
-    projectUrl: "#",
+    imageHint: "blog interface",
+    projectUrl: "https://zain-blog-app.onrender.com/",
+    githubUrl: "https://github.com/ZainAhmadF28/zain-blog-app",
   },
 ];
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="py-16 md:py-24">
+    <section id="projects" className="py-16 md:py-24 bg-[#141420]">
       <div className="container mx-auto max-w-7xl px-4 md:px-6">
-        <div className="text-center mb-12 animate-in fade-in-0 slide-in-from-bottom-12 duration-500">
-          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl">My Projects</h2>
-          <p className="text-muted-foreground">Most Recent Works</p>
-        </div>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
-          {projects.map((project, index) => (
-            <div key={index} className="animate-in fade-in-0 slide-in-from-bottom-12 duration-500" style={{ animationDelay: `${index * 100}ms`}}>
-              <ProjectCard {...project} />
+        <Fade direction="up" triggerOnce>
+            <div className="text-center mb-12">
+              <h2 className="font-bold text-4xl text-white">My Projects</h2>
+              <p className="text-gray-400">Most recent works</p>
             </div>
+        </Fade>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, index) => (
+            <Fade key={index} direction="up" delay={index * 100} triggerOnce>
+              <ProjectCard {...project} />
+            </Fade>
           ))}
         </div>
       </div>

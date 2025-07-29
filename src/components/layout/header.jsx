@@ -2,15 +2,13 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Gamepad2, Menu } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
+  { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
 ];
@@ -43,57 +41,54 @@ export function Header() {
     <header
       className={cn(
         "sticky top-0 z-50 w-full transition-all duration-300",
-        isScrolled ? "border-b border-border/80 bg-background/80 backdrop-blur-sm" : ""
+        isScrolled ? "bg-[#141420]" : "bg-transparent"
       )}
     >
-      <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-6">
+      <div className="container mx-auto flex h-20 max-w-7xl items-center justify-between px-4 md:px-6">
         <Link href="#home" className="flex items-center gap-2">
-          <Gamepad2 className="h-7 w-7 text-primary" />
-          <span className="text-xl font-bold font-headline">Radiant Portfolio</span>
+          <span className="text-3xl font-bold text-white">Zain.</span>
         </Link>
-        <nav className="hidden items-center gap-6 md:flex">
+        
+        <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
-                activeSection === href.substring(1) ? "text-primary" : "text-muted-foreground"
+                "text-lg font-medium transition-colors hover:text-primary",
+                activeSection === href.substring(1) ? "text-primary" : "text-white"
               )}
             >
               {label}
             </Link>
           ))}
         </nav>
+
         <div className="md:hidden">
-          <Sheet open={isMobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu />
-                <span className="sr-only">Open menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right">
-              <div className="flex flex-col items-center justify-center h-full">
-                <nav className="flex flex-col items-center gap-8">
+            <button onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
+                {isMobileMenuOpen ? <X className="h-8 w-8 text-white"/> : <Menu className="h-8 w-8 text-white" />}
+            </button>
+        </div>
+
+        {isMobileMenuOpen && (
+            <div className="absolute top-20 left-0 w-full bg-[#141420] md:hidden">
+                 <nav className="flex flex-col items-center gap-6 py-6">
                   {navLinks.map(({ href, label }) => (
                     <Link
                       key={href}
                       href={href}
                       onClick={() => setMobileMenuOpen(false)}
                       className={cn(
-                        "text-2xl font-medium transition-colors hover:text-primary",
-                         activeSection === href.substring(1) ? "text-primary" : "text-foreground"
+                        "text-xl font-medium transition-colors hover:text-primary",
+                         activeSection === href.substring(1) ? "text-primary" : "text-white"
                       )}
                     >
                       {label}
                     </Link>
                   ))}
                 </nav>
-              </div>
-            </SheetContent>
-          </Sheet>
-        </div>
+            </div>
+        )}
       </div>
     </header>
   );

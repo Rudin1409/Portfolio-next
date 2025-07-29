@@ -1,12 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardTitle } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
+import { Github } from "lucide-react";
 
-export function ProjectCard({ title, description, imageUrl, imageHint, projectUrl }) {
+export function ProjectCard({ title, description, imageUrl, imageHint, projectUrl, githubUrl }) {
   return (
-    <Card className="group overflow-hidden transition-all duration-300 hover:shadow-primary/20 hover:border-primary/50">
+    <div className="bg-[#1f1f2b] rounded-lg overflow-hidden transition-transform duration-300 hover:transform hover:-translate-y-2">
       <div className="overflow-hidden">
         <Image
           src={imageUrl}
@@ -14,20 +13,25 @@ export function ProjectCard({ title, description, imageUrl, imageHint, projectUr
           width={600}
           height={400}
           data-ai-hint={imageHint}
-          className="object-cover w-full h-auto transition-transform duration-300 group-hover:scale-105"
+          className="object-cover w-full h-48"
         />
       </div>
       <div className="p-6">
-        <CardTitle className="mb-2 font-headline text-xl">{title}</CardTitle>
-        <p className="text-muted-foreground text-sm leading-relaxed">{description}</p>
+        <h3 className="font-bold text-xl text-white mb-2">{title}</h3>
+        <p className="text-gray-400 text-sm mb-4 h-24 overflow-y-auto">{description}</p>
+        <div className="flex justify-between items-center">
+            <Button asChild className="bg-primary hover:bg-primary/90 text-white rounded-full px-6">
+                <Link href={projectUrl} target="_blank">
+                    Demo
+                </Link>
+            </Button>
+            {githubUrl && (
+                <Link href={githubUrl} target="_blank" aria-label="GitHub">
+                    <Github className="h-7 w-7 text-white transition-colors hover:text-primary" />
+                </Link>
+            )}
+        </div>
       </div>
-      <CardFooter>
-        <Button asChild variant="link" className="p-0 text-primary">
-          <Link href={projectUrl}>
-            View Demo <ArrowRight className="ml-2 h-4 w-4" />
-          </Link>
-        </Button>
-      </CardFooter>
-    </Card>
+    </div>
   );
 }
