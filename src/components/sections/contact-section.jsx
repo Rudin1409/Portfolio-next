@@ -152,6 +152,13 @@ export function ContactSection() {
                                         </div>
                                     </div>
                                 ))}
+                                {comments.length === 0 && (
+                                    <div className="flex flex-col items-center justify-center h-full text-center text-foreground/50 p-8 bg-secondary/20 rounded-lg">
+                                        <MessageSquare className="h-10 w-10 mb-4" />
+                                        <p className="font-bold text-lg">No comments yet.</p>
+                                        <p>Be the first to leave a comment!</p>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </Fade>
