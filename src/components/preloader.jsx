@@ -1,7 +1,9 @@
 "use client";
 import { Github, Instagram, Linkedin, Bot, ArrowDown } from 'lucide-react';
-import LetterGlitch from './LetterGlitch';
 import { Typewriter } from 'react-simple-typewriter';
+import dynamic from 'next/dynamic';
+
+const LetterGlitch = dynamic(() => import('./LetterGlitch'), { ssr: false });
 
 export function Preloader({ onEnter }) {
 
@@ -41,13 +43,13 @@ export function Preloader({ onEnter }) {
         {/* Bottom Content */}
         <div className="flex-1 flex flex-col items-center justify-end gap-4">
             <div className="flex items-center gap-6 mb-4">
-                <a href="#" target="_blank" aria-label="GitHub" className="cursor-target">
+                <a href="https://github.com/Rudin1409" target="_blank" aria-label="GitHub" className="cursor-target">
                     <Github className="h-7 w-7 text-foreground transition-colors hover:text-primary" />
                 </a>
-                <a href="#" target="_blank" aria-label="LinkedIn" className="cursor-target">
+                <a href="https://www.linkedin.com/in/m-bahrudin/" target="_blank" aria-label="LinkedIn" className="cursor-target">
                     <Linkedin className="h-7 w-7 text-foreground transition-colors hover:text-primary" />
                 </a>
-                <a href="#" aria-label="Instagram" className="cursor-target">
+                <a href="https://www.instagram.com/m.bhrdnnn_/" target="_blank" aria-label="Instagram" className="cursor-target">
                     <Instagram className="h-7 w-7 text-foreground transition-colors hover:text-primary" />
                 </a>
             </div>

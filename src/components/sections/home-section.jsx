@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Instagram, Sparkles, Bot } from "lucide-react";
+import { Github, Linkedin, Instagram, Sparkles } from "lucide-react";
 import { Fade } from "react-awesome-reveal";
 import { Typewriter } from 'react-simple-typewriter'
 
@@ -44,21 +44,21 @@ export function HomeSection() {
                 ))}
             </div>
             <div className="flex items-center gap-4">
-               <Link href="#" target="_blank" aria-label="GitHub" className="cursor-target">
+               <a href="https://github.com/Rudin1409" target="_blank" aria-label="GitHub" className="cursor-target">
                   <div className="p-2 rounded-full bg-gray-800/50 border border-gray-700 hover:bg-gray-700/50 transition-colors">
                     <Github className="h-6 w-6 text-foreground" />
                   </div>
-               </Link>
-               <Link href="#" aria-label="Instagram" className="cursor-target">
+               </a>
+               <a href="https://www.instagram.com/m.bhrdnnn_/" target="_blank" aria-label="Instagram" className="cursor-target">
                     <div className="p-2 rounded-full bg-gray-800/50 border border-gray-700 hover:bg-gray-700/50 transition-colors">
                         <Instagram className="h-6 w-6 text-foreground" />
                     </div>
-               </Link>
-               <Link href="#" target="_blank" aria-label="AI Projects" className="cursor-target">
+               </a>
+               <a href="https://www.linkedin.com/in/m-bahrudin/" target="_blank" aria-label="LinkedIn" className="cursor-target">
                   <div className="p-2 rounded-full bg-gray-800/50 border border-gray-700 hover:bg-gray-700/50 transition-colors">
-                    <Bot className="h-6 w-6 text-foreground" />
+                    <Linkedin className="h-6 w-6 text-foreground" />
                   </div>
-               </Link>
+               </a>
             </div>
             </Fade>
         </div>

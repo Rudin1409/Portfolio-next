@@ -1,4 +1,4 @@
-import { Github, Instagram } from "lucide-react";
+import { Github, Instagram, Mail } from "lucide-react";
 import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
 
@@ -24,24 +24,31 @@ const socialLinks = [
   {
     name: "GitHub",
     description: "Follow my projects on GitHub",
-    href: "#",
+    href: "https://github.com/Rudin1409",
     icon: <Github className="h-8 w-8 text-white" />,
     className: "bg-gray-700/80 hover:bg-gray-700",
   },
   {
     name: "Instagram",
     description: "Follow me on Instagram",
-    href: "#",
+    href: "https://www.instagram.com/m.bhrdnnn_/",
     icon: <Instagram className="h-8 w-8 text-white" />,
     className: "bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600",
   },
   {
     name: "TikTok",
     description: "Follow me on TikTok",
-    href: "#",
+    href: "https://www.tiktok.com/@bahrudin_86",
     icon: <TikTokIcon className="h-8 w-8" />,
     className: "bg-gradient-to-r from-red-600 to-black hover:from-red-700 hover:to-gray-900",
   },
+  {
+    name: "Email",
+    description: "Send me an email",
+    href: "mailto:mbahrudin140906@gmail.com",
+    icon: <Mail className="h-8 w-8 text-white" />,
+    className: "bg-blue-600/80 hover:bg-blue-600",
+  }
 ];
 
 export function SocialsSection() {

@@ -28,13 +28,13 @@ export function Footer() {
       <div className="container mx-auto max-w-7xl px-4 md:px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
         <p className="text-sm text-center sm:text-left text-foreground/70">Copyright © {currentYear} M. Bahrudin.</p>
         <div className="flex items-center gap-4">
-          <Link href="#" target="_blank" aria-label="GitHub" className="cursor-target">
+          <Link href="https://github.com/Rudin1409" target="_blank" aria-label="GitHub" className="cursor-target">
             <Github className="h-6 w-6 text-foreground transition-colors hover:text-primary" />
           </Link>
-          <Link href="#" target="_blank" aria-label="Instagram" className="cursor-target">
+          <Link href="https://www.instagram.com/m.bhrdnnn_/" target="_blank" aria-label="Instagram" className="cursor-target">
             <Instagram className="h-6 w-6 text-foreground transition-colors hover:text-primary" />
           </Link>
-          <Link href="#" aria-label="TikTok" className="cursor-target">
+          <Link href="https://www.tiktok.com/@bahrudin_86" target="_blank" aria-label="TikTok" className="cursor-target">
             <TikTokIcon className="h-6 w-6 text-foreground transition-colors hover:text-primary" />
           </Link>
         </div>
