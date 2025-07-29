@@ -46,13 +46,13 @@ export function ContactSection() {
                 <Fade direction="up" triggerOnce>
                     <div className="text-center">
                         <h2 className="text-6xl md:text-8xl font-bold font-headline uppercase tracking-tight">
-                            <span className="bg-gradient-to-r from-cyan-400 to-teal-600 bg-clip-text text-transparent">
+                            <span className="text-primary text-glow">
                                 Get In
                             </span>
-                            <span className="text-white"> Touch</span>
+                            <span className="text-foreground"> Touch</span>
                         </h2>
-                        <p className="mt-4 text-lg md:text-xl text-foreground/70 font-code">
-                            Mari berkolaborasi dan ciptakan sesuatu yang amazing!
+                        <p className="mt-4 text-lg md:text-xl text-foreground/70 font-headline uppercase tracking-wider">
+                            Have a project in mind or want to collaborate? Let's talk.
                         </p>
                     </div>
                 </Fade>
