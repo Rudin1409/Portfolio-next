@@ -37,7 +37,7 @@ export function CertificateCard({ title, issuer, date, imageUrl, imageHint }) {
           </div>
         </div>
       </DialogTrigger>
-      <DialogContent className="max-w-4xl bg-secondary border-primary/50">
+      <DialogContent className="max-w-2xl bg-secondary border-primary/50">
         <DialogHeader>
           <DialogTitle className="text-2xl text-foreground font-bold mb-2">{title}</DialogTitle>
           <div className="flex gap-2">
