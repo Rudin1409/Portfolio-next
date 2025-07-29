@@ -73,6 +73,13 @@ const certificates = [
     imageUrl: "/sertifikat/5.png",
     imageHint: "fiber optic certificate",
   },
+  {
+    title: "Axioo Class Program Hardware Fundamental",
+    issuer: "Axioo",
+    date: "2023",
+    imageUrl: "/sertifikat/6.png",
+    imageHint: "hardware fundamental certificate",
+  },
 ];
 
 const techSkills = [
