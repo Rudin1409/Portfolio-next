@@ -8,58 +8,54 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #0c1427;
-  color: #f1f1f1;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 40px 40px;
+  background-color: #0f1923;
+  color: #ece8e1;
 }
 
 @layer base {
   :root {
-    --background: 220 39% 10%; /* #0c1427 */
-    --foreground: 0 0% 98%;
-    --card: 220 39% 15%;
-    --card-foreground: 0 0% 98%;
-    --popover: 220 39% 10%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 180 100% 50%; /* cyan */
-    --primary-foreground: 220 39% 10%;
-    --secondary: 220 39% 20%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 220 39% 20%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 180 100% 50%;
-    --accent-foreground: 220 39% 10%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 220 39% 25%;
-    --input: 220 39% 25%;
-    --ring: 180 100% 50%;
+    --background: 209 41% 10%; /* #0f1923 */
+    --foreground: 34 25% 94%; /* #ece8e1 */
+    --card: 209 41% 15%;
+    --card-foreground: 34 25% 94%;
+    --popover: 209 41% 10%;
+    --popover-foreground: 34 25% 94%;
+    --primary: 355 100% 64%; /* #ff4655 - Valorant Red */
+    --primary-foreground: 34 25% 94%;
+    --secondary: 209 41% 20%;
+    --secondary-foreground: 34 25% 94%;
+    --muted: 209 41% 20%;
+    --muted-foreground: 34 25% 70%;
+    --accent: 355 100% 64%;
+    --accent-foreground: 34 25% 94%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 34 25% 94%;
+    --border: 209 41% 25%;
+    --input: 209 41% 25%;
+    --ring: 355 100% 64%;
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 220 39% 10%;
-    --foreground: 0 0% 98%;
-    --card: 220 39% 15%;
-    --card-foreground: 0 0% 98%;
-    --popover: 220 39% 10%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 180 100% 50%;
-    --primary-foreground: 220 39% 10%;
-    --secondary: 220 39% 20%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 220 39% 20%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 180 100% 50%;
-    --accent-foreground: 220 39% 10%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 220 39% 25%;
-    --input: 220 39% 25%;
-    --ring: 180 100% 50%;
+    --background: 209 41% 10%;
+    --foreground: 34 25% 94%;
+    --card: 209 41% 15%;
+    --card-foreground: 34 25% 94%;
+    --popover: 209 41% 10%;
+    --popover-foreground: 34 25% 94%;
+    --primary: 355 100% 64%;
+    --primary-foreground: 34 25% 94%;
+    --secondary: 209 41% 20%;
+    --secondary-foreground: 34 25% 94%;
+    --muted: 209 41% 20%;
+    --muted-foreground: 34 25% 70%;
+    --accent: 355 100% 64%;
+    --accent-foreground: 34 25% 94%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 34 25% 94%;
+    --border: 209 41% 25%;
+    --input: 209 41% 25%;
+    --ring: 355 100% 64%;
   }
 }
 

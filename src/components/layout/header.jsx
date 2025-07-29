@@ -25,11 +25,11 @@ export function Header() {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-sm border-b-2 border-primary/30">
       <div className="container mx-auto flex h-24 max-w-7xl items-center justify-between px-4 md:px-6 relative">
         <nav className="hidden items-center gap-8 md:flex">
           {navLinksLeft.map(({ href, label }) => (
-            <Link key={href} href={href} className="text-lg font-medium transition-colors hover:text-primary text-white">
+            <Link key={href} href={href} className="text-lg font-headline font-semibold uppercase tracking-wider transition-colors hover:text-primary text-foreground">
               {label}
             </Link>
           ))}
@@ -39,16 +39,15 @@ export function Header() {
             <Link href="#home" className="flex items-center gap-2">
                 <ZLogo />
                 <div className="flex flex-col">
-                    <span className="text-xl font-bold text-white tracking-wider">ZAIN AHMAD FAHREZI</span>
-                    <span className="text-xs text-primary tracking-widest">LET'S SEE THE AWESOME EXPERIENCE</span>
+                    <span className="text-xl font-bold text-foreground tracking-wider font-headline">ZAIN AHMAD FAHREZI</span>
+                    <span className="text-xs text-primary tracking-widest font-body">LET'S SEE THE AWESOME EXPERIENCE</span>
                 </div>
             </Link>
-            <div className="w-[200px] h-[2px] bg-primary mt-2 clip-path-trapezoid"></div>
         </div>
 
         <nav className="hidden items-center gap-8 md:flex">
           {navLinksRight.map(({ href, label }) => (
-            <Link key={href} href={href} className="text-lg font-medium transition-colors hover:text-primary text-white">
+            <Link key={href} href={href} className="text-lg font-headline font-semibold uppercase tracking-wider transition-colors hover:text-primary text-foreground">
               {label}
             </Link>
           ))}
@@ -61,7 +60,7 @@ export function Header() {
         </div>
         <div className="md:hidden">
             <button onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
-                {isMobileMenuOpen ? <X className="h-8 w-8 text-white"/> : <Menu className="h-8 w-8 text-white" />}
+                {isMobileMenuOpen ? <X className="h-8 w-8 text-foreground"/> : <Menu className="h-8 w-8 text-foreground" />}
             </button>
         </div>
 
@@ -73,7 +72,7 @@ export function Header() {
                       key={href}
                       href={href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="text-xl font-medium transition-colors hover:text-primary text-white"
+                      className="text-xl font-headline font-semibold uppercase tracking-wider transition-colors hover:text-primary text-foreground"
                     >
                       {label}
                     </Link>
@@ -82,7 +81,6 @@ export function Header() {
             </div>
         )}
       </div>
-       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[40%] h-[2px] bg-primary/50" style={{ clipPath: 'polygon(15% 0, 85% 0, 100% 100%, 0% 100%)' }}></div>
     </header>
   );
 }

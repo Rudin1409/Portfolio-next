@@ -10,7 +10,7 @@ export default {
     extend: {
       fontFamily: {
         body: ['Poppins', 'sans-serif'],
-        headline: ['Poppins', 'sans-serif'],
+        headline: ['Teko', 'sans-serif'],
         code: ['"Roboto Mono"', 'monospace'],
       },
       colors: {

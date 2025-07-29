@@ -15,14 +15,14 @@ export function HomeSection() {
       <div className="grid w-full items-center gap-8 md:grid-cols-2 lg:gap-12">
         <div className="space-y-6">
          <Fade direction="left" triggerOnce>
-            <Button variant="outline" className="rounded-full border-primary/50 bg-primary/10 text-primary hover:bg-primary/20">
+            <Button variant="outline" className="rounded-none border-primary bg-primary/10 text-primary hover:bg-primary/20 font-headline uppercase tracking-widest">
                 <Sparkles className="mr-2 h-4 w-4" />
                 Innovation For the Future
             </Button>
-            <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl text-white text-glow">
+            <h1 className="text-8xl font-bold tracking-tighter sm:text-6xl md:text-8xl text-foreground font-headline uppercase text-glow">
                 WELCOME TO MY PORTFOLIO
             </h1>
-            <h2 className="text-4xl font-bold text-cyan-400">
+            <h2 className="text-5xl font-bold text-primary font-headline uppercase">
                 <Typewriter
                     words={['Front End Developer', 'Web Designer', 'UI/UX Enthusiast']}
                     loop={true}
@@ -33,7 +33,7 @@ export function HomeSection() {
                     delaySpeed={1500}
                 />
             </h2>
-            <p className="max-w-md text-lg text-gray-400 md:text-xl">
+            <p className="max-w-md text-lg text-foreground/80 md:text-xl font-body">
                 I craft responsive and visually engaging websites using React, Tailwind CSS, and modern web technologies.
             </p>
             <div className="flex flex-wrap items-center gap-4">
@@ -46,17 +46,17 @@ export function HomeSection() {
             <div className="flex items-center gap-4">
                <Link href="https://github.com/ZainAhmadF28" target="_blank" aria-label="GitHub">
                   <div className="p-2 rounded-full bg-gray-800/50 border border-gray-700 hover:bg-gray-700/50 transition-colors">
-                    <Github className="h-6 w-6 text-white" />
+                    <Github className="h-6 w-6 text-foreground" />
                   </div>
                </Link>
                <Link href="#" aria-label="Instagram">
                     <div className="p-2 rounded-full bg-gray-800/50 border border-gray-700 hover:bg-gray-700/50 transition-colors">
-                        <Instagram className="h-6 w-6 text-white" />
+                        <Instagram className="h-6 w-6 text-foreground" />
                     </div>
                </Link>
                <Link href="https://www.linkedin.com/in/zain-ahmad-f/" target="_blank" aria-label="LinkedIn">
                   <div className="p-2 rounded-full bg-gray-800/50 border border-gray-700 hover:bg-gray-700/50 transition-colors">
-                    <Linkedin className="h-6 w-6 text-white" />
+                    <Linkedin className="h-6 w-6 text-foreground" />
                   </div>
                </Link>
             </div>
@@ -71,7 +71,7 @@ export function HomeSection() {
                         width={350}
                         height={450}
                         data-ai-hint="id card developer"
-                        className="object-contain rounded-3xl"
+                        className="object-contain rounded-lg"
                     />
                  </div>
             </Fade>
