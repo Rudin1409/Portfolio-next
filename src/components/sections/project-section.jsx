@@ -46,11 +46,11 @@ const certificates = [
     imageHint: "frontend certificate",
   },
   {
-    title: "Machine Learning",
+    title: "Dasar Pemrograman Web",
     issuer: "Dicoding Indonesia",
-    date: "Feb 2024",
-    imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "machine learning certificate",
+    date: "Agustus 2023",
+    imageUrl: "/sertifikat/2.png",
+    imageHint: "web programming certificate",
   },
   {
     title: "Data Science",
