@@ -6,7 +6,6 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { Preloader } from '@/components/preloader';
-import FluidCursor from '@/components/fluid-cursor';
 
 const metadata = {
   title: 'Zain | Portfolio',
@@ -39,7 +38,6 @@ export default function RootLayout({
           <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Roboto+Mono&display=swap" rel="stylesheet" />
         </head>
         <body className="antialiased">
-          <FluidCursor />
           <Preloader onEnter={handleEnter} />
         </body>
       </html>
@@ -55,7 +53,6 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Mono&display=swap" rel="stylesheet" />
       </head>
       <body className="antialiased">
-        <FluidCursor />
         <Header />
         <main className="relative overflow-x-hidden">{children}</main>
         <Footer />

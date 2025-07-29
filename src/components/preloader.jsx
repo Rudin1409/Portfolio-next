@@ -1,6 +1,5 @@
 "use client";
 import { Github, Linkedin, Instagram, Bot, ArrowDown } from 'lucide-react';
-import TextPressure from './text-pressure';
 
 export function Preloader({ onEnter }) {
   return (
@@ -14,21 +13,8 @@ export function Preloader({ onEnter }) {
       </div>
 
       <div className="text-center w-full max-w-4xl">
-        <div className="h-24 md:h-32">
-           <TextPressure 
-            text="Zain Ahmad Fahrezi" 
-            minFontSize={30}
-            italic={false}
-           />
-        </div>
-        <div className='h-12'>
-            <TextPressure 
-              text="www.zainahmadf.com"
-              minFontSize={12}
-              weight={false}
-              italic={false}
-            />
-        </div>
+         <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Zain Ahmad Fahrezi</h1>
+         <p className="text-lg md:text-xl text-gray-400">www.zainahmadf.com</p>
       </div>
       
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
