@@ -1,4 +1,6 @@
+
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Download, Eye } from "lucide-react";
 import { Fade } from "react-awesome-reveal";
@@ -40,9 +42,11 @@ export function AboutSection() {
                 <Download className="mr-2" />
                 Download CV
               </Button>
-              <Button size="lg" variant="outline" className="font-headline uppercase tracking-wider cursor-target">
-                <Eye className="mr-2" />
-                View Projects
+              <Button asChild size="lg" variant="outline" className="font-headline uppercase tracking-wider cursor-target">
+                <Link href="#projects">
+                  <Eye className="mr-2" />
+                  View Projects
+                </Link>
               </Button>
             </div>
           </div>
