@@ -10,16 +10,6 @@ export function Preloader({ onEnter }) {
             <div className="absolute -top-20 left-1/2 -translate-x-1/2">
                  <Bot size={80} className="text-cyan-400 animate-bounce" />
             </div>
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 flex items-center gap-1">
-                 <span className="text-xs bg-gray-800/50 text-white/80 p-2 rounded-full backdrop-blur-sm">Built with Spline</span>
-            </div>
-        </div>
-        <div className="absolute top-20 right-20">
-            <div className="grid grid-cols-5 gap-1 animate-pulse">
-                {[...Array(25)].map((_, i) => (
-                    <div key={i} className="w-2 h-2 bg-cyan-400/50 rounded-full" style={{ animationDelay: `${i * 0.05}s` }}></div>
-                ))}
-            </div>
         </div>
       </div>
 
