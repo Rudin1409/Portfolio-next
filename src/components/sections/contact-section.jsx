@@ -1,7 +1,7 @@
 
-
 "use client";
 
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -9,30 +9,62 @@ import { Fade } from "react-awesome-reveal";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Send } from "lucide-react";
+import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Send, Heart, MessageSquare, Camera } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
-const formSchema = z.object({
+const commentSchema = z.object({
     name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-    email: z.string().email({ message: "Please enter a valid email." }),
-    message: z.string().min(10, { message: "Message must be at least 10 characters." }),
+    comment: z.string().min(3, { message: "Comment must be at least 3 characters." }),
 });
 
+const initialComments = [
+    {
+        id: 1,
+        name: "RDN",
+        avatar: "R",
+        date: "29 Juli 2025 pukul 13.30",
+        text: "Hebat banget kk keren",
+        likes: 0,
+    },
+    {
+        id: 2,
+        name: "hhdf",
+        avatar: "H",
+        date: "29 Juli 2025 pukul 10.36",
+        text: "nsdkjfng",
+        likes: 0,
+    },
+];
 
 export function ContactSection() {
+    const [comments, setComments] = useState(initialComments);
+
     const form = useForm({
-        resolver: zodResolver(formSchema),
+        resolver: zodResolver(commentSchema),
         defaultValues: {
             name: "",
-            email: "",
-            message: "",
+            comment: "",
         },
     });
 
     function onSubmit(values) {
-        // TODO: Implement form submission logic
-        console.log(values);
+        const newComment = {
+            id: Date.now(),
+            name: values.name,
+            avatar: values.name.substring(0, 1).toUpperCase(),
+            date: new Date().toLocaleString("id-ID", { dateStyle: 'long', timeStyle: 'short'}).replace('pukul', 'pukul'),
+            text: values.comment,
+            likes: 0,
+        };
+        setComments([newComment, ...comments]);
+        form.reset();
     }
+    
+    const handleLike = (id) => {
+        setComments(comments.map(c => c.id === id ? { ...c, likes: c.likes + 1 } : c));
+    };
 
     return (
         <section id="contact" className="relative py-24 bg-[#0A121A] overflow-hidden">
@@ -58,62 +90,92 @@ export function ContactSection() {
                     </div>
                 </Fade>
 
-                <Fade direction="up" triggerOnce delay={200}>
-                    <div className="max-w-2xl mx-auto mt-16">
-                        <h3 className="text-3xl font-bold text-center mb-8 font-headline uppercase text-glow">Contact Me</h3>
-                        <Form {...form}>
-                            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                    <FormField
-                                        control={form.control}
-                                        name="name"
-                                        render={({ field }) => (
-                                            <FormItem>
-                                                <FormLabel className="font-headline uppercase tracking-wider text-foreground/80">Your name</FormLabel>
-                                                <FormControl>
-                                                    <Input placeholder="Enter your name" {...field} className="bg-secondary border-border focus:border-primary focus:ring-primary" />
-                                                </FormControl>
-                                                <FormMessage />
-                                            </FormItem>
-                                        )}
-                                    />
-                                    <FormField
-                                        control={form.control}
-                                        name="email"
-                                        render={({ field }) => (
-                                            <FormItem>
-                                                <FormLabel className="font-headline uppercase tracking-wider text-foreground/80">Email address</FormLabel>
-                                                <FormControl>
-                                                    <Input placeholder="Enter your email" {...field} className="bg-secondary border-border focus:border-primary focus:ring-primary" />
-                                                </FormControl>
-                                                <FormMessage />
-                                            </FormItem>
-                                        )}
-                                    />
+                <div className="max-w-7xl mx-auto mt-16 grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <Fade direction="left" triggerOnce delay={200}>
+                        <div className="bg-secondary/50 p-8 rounded-lg border border-border">
+                            <div className="flex items-center gap-4 mb-6">
+                                <MessageSquare className="h-8 w-8 text-primary" />
+                                <div>
+                                    <h3 className="text-2xl font-bold font-headline text-foreground">Leave a Comment</h3>
+                                    <p className="text-foreground/70">Share your thoughts!</p>
                                 </div>
-                                <FormField
-                                    control={form.control}
-                                    name="message"
-                                    render={({ field }) => (
-                                        <FormItem>
-                                            <FormLabel className="font-headline uppercase tracking-wider text-foreground/80">Your Message</FormLabel>
-                                            <FormControl>
-                                                <Textarea placeholder="How can I help you?" {...field} className="bg-secondary border-border focus:border-primary focus:ring-primary" />
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )}
-                                />
-                                <div className="text-center">
-                                    <Button type="submit" size="lg" className="font-headline uppercase tracking-wider cursor-target w-full md:w-auto">
-                                        Send Message
+                            </div>
+                            <Form {...form}>
+                                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                                    <div className="flex items-start gap-4">
+                                        <div className="relative cursor-pointer group">
+                                            <Avatar className="h-12 w-12 border-2 border-dashed border-border group-hover:border-primary transition-colors">
+                                                <AvatarFallback className="bg-transparent">
+                                                    <Camera className="h-6 w-6 text-foreground/50 group-hover:text-primary transition-colors" />
+                                                </AvatarFallback>
+                                            </Avatar>
+                                        </div>
+                                        <div className="w-full space-y-4">
+                                            <FormField
+                                                control={form.control}
+                                                name="name"
+                                                render={({ field }) => (
+                                                    <FormItem>
+                                                        <FormControl>
+                                                            <Input placeholder="Your Name" {...field} className="bg-background/70 border-border focus:border-primary focus:ring-primary" />
+                                                        </FormControl>
+                                                        <FormMessage />
+                                                    </FormItem>
+                                                )}
+                                            />
+                                            <FormField
+                                                control={form.control}
+                                                name="comment"
+                                                render={({ field }) => (
+                                                    <FormItem>
+                                                        <FormControl>
+                                                            <Textarea placeholder="Write your comment..." {...field} className="bg-background/70 border-border focus:border-primary focus:ring-primary min-h-[100px]" />
+                                                        </FormControl>
+                                                        <FormMessage />
+                                                    </FormItem>
+                                                )}
+                                            />
+                                        </div>
+                                    </div>
+                                    <Button type="submit" size="lg" className="font-headline uppercase tracking-wider cursor-target w-full">
+                                        Post Comment
                                         <Send className="ml-2 h-5 w-5" />
                                     </Button>
-                                </div>
-                            </form>
-                        </Form>
-                    </div>
-                </Fade>
+                                </form>
+                            </Form>
+                        </div>
+                    </Fade>
+                     <Fade direction="right" triggerOnce delay={200}>
+                        <div className="space-y-8">
+                             <div className="flex items-center gap-4">
+                                <h3 className="text-2xl font-bold font-headline text-foreground">Comments ({comments.length})</h3>
+                            </div>
+                            <div className="space-y-6 max-h-[500px] overflow-y-auto pr-4">
+                                {comments.map((comment) => (
+                                    <div key={comment.id} className="flex items-start gap-4 bg-secondary/50 p-6 rounded-lg border border-border">
+                                        <Avatar>
+                                            <AvatarImage src={`https://placehold.co/40x40.png?text=${comment.avatar}`} />
+                                            <AvatarFallback>{comment.avatar}</AvatarFallback>
+                                        </Avatar>
+                                        <div className="flex-1">
+                                            <div className="flex items-center justify-between">
+                                                <p className="font-bold text-foreground">{comment.name}</p>
+                                                <p className="text-xs text-foreground/50">{comment.date}</p>
+                                            </div>
+                                            <p className="mt-2 text-foreground/80">{comment.text}</p>
+                                            <div className="mt-4 flex items-center gap-2">
+                                                <Button variant="ghost" size="icon" onClick={() => handleLike(comment.id)} className="h-8 w-8 text-foreground/60 hover:text-primary hover:bg-primary/10 cursor-target">
+                                                    <Heart className={`h-4 w-4 ${comment.likes > 0 ? 'text-primary fill-current' : ''}`} />
+                                                </Button>
+                                                <span className="text-sm text-foreground/60">{comment.likes}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </Fade>
+                </div>
             </div>
         </section>
     );
