@@ -60,8 +60,6 @@ const TargetCursor = ({
     };
 
     gsap.set(cursor, {
-      xPercent: -50,
-      yPercent: -50,
       x: window.innerWidth / 2,
       y: window.innerHeight / 2,
     });
