@@ -59,6 +59,13 @@ const certificates = [
     imageUrl: "/sertifikat/3.jpg",
     imageHint: "networking certificate",
   },
+  {
+    title: "Mikrotik MTCNA",
+    issuer: "Mikrotik",
+    date: "2024",
+    imageUrl: "/sertifikat/4.png",
+    imageHint: "mikrotik mtcna certificate",
+  },
 ];
 
 const techSkills = [
