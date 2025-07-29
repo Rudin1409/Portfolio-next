@@ -6,6 +6,7 @@ import { Fade } from "react-awesome-reveal";
 import { Code, Award, Layers } from "lucide-react";
 import { ProjectCard } from "@/components/project-card";
 import { CertificateCard } from "@/components/certificate-card";
+import { CertificateViewer } from "@/components/certificate-viewer";
 import { SkillCard } from "@/components/skill-card";
 import { Separator } from "@/components/ui/separator";
 import { TechIcon } from "@/components/tech-icons";
@@ -129,6 +130,27 @@ const tabs = [
 
 export function ProjectSection() {
   const [activeTab, setActiveTab] = useState("projects");
+  const [selectedCertificateIndex, setSelectedCertificateIndex] = useState(null);
+
+  const openCertificateViewer = (index) => {
+    setSelectedCertificateIndex(index);
+  };
+
+  const closeCertificateViewer = () => {
+    setSelectedCertificateIndex(null);
+  };
+
+  const showNextCertificate = () => {
+    if (selectedCertificateIndex !== null) {
+      setSelectedCertificateIndex((prevIndex) => (prevIndex + 1) % certificates.length);
+    }
+  };
+
+  const showPrevCertificate = () => {
+    if (selectedCertificateIndex !== null) {
+      setSelectedCertificateIndex((prevIndex) => (prevIndex - 1 + certificates.length) % certificates.length);
+    }
+  };
 
   const renderContent = () => {
     switch (activeTab) {
@@ -147,7 +169,7 @@ export function ProjectSection() {
           <Fade key="certificates" direction="up" triggerOnce>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {certificates.map((certificate, index) => (
-                <CertificateCard key={index} {...certificate} />
+                <CertificateCard key={index} {...certificate} onOpen={() => openCertificateViewer(index)} />
               ))}
             </div>
           </Fade>
@@ -209,6 +231,18 @@ export function ProjectSection() {
         </div>
 
         <div>{renderContent()}</div>
+
+        {selectedCertificateIndex !== null && (
+          <CertificateViewer
+            isOpen={selectedCertificateIndex !== null}
+            onClose={closeCertificateViewer}
+            certificate={certificates[selectedCertificateIndex]}
+            onNext={showNextCertificate}
+            onPrev={showPrevCertificate}
+            hasNext={selectedCertificateIndex < certificates.length - 1}
+            hasPrev={selectedCertificateIndex > 0}
+          />
+        )}
       </div>
     </section>
   );
