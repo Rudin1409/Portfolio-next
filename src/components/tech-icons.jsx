@@ -13,11 +13,12 @@ const icons = {
   Express: () => <Image src="https://brandlogos.net/wp-content/uploads/2021/08/express-js-logo.png" alt="Express" width={64} height={64} data-ai-hint="express js logo" />,
   Python: () => <Image src="https://brandlogos.net/wp-content/uploads/2021/10/python-logo-512x512.png" alt="Python" width={64} height={64} data-ai-hint="python logo" />,
   Mongodb: () => <Image src="https://brandlogos.net/wp-content/uploads/2020/09/mongodb-logo-512x512.png" alt="MongoDB" width={64} height={64} data-ai-hint="mongodb logo" />,
-  Postgresql: () => <Image src="https://brandlogos.net/wp-content/uploads/2020/09/postgresql-logo-512x512.png" alt="PostgreSQL" width={64} height={64} data-ai-hint="postgresql logo" />,
   Github: () => <Image src="https://brandlogos.net/wp-content/uploads/2020/09/github-logo.png" alt="GitHub" width={64} height={64} data-ai-hint="github logo" />,
   Vercel: () => <Image src="https://brandlogos.net/wp-content/uploads/2021/11/vercel-logo-512x512.png" alt="Vercel" width={64} height={64} data-ai-hint="vercel logo" />,
   Figma: () => <Image src="https://brandlogos.net/wp-content/uploads/2020/09/figma-logo-512x512.png" alt="Figma" width={64} height={64} data-ai-hint="figma logo" />,
   Genkit: () => <Bot className="w-12 h-12" />,
+  Laravel: () => <Image src="https://brandlogos.net/wp-content/uploads/2020/09/laravel-logo-512x512.png" alt="Laravel" width={64} height={64} data-ai-hint="laravel logo" />,
+  Mysql: () => <Image src="https://brandlogos.net/wp-content/uploads/2020/09/mysql-logo-512x512.png" alt="MySQL" width={64} height={64} data-ai-hint="mysql logo" />,
 };
 
 export const TechIcon = ({ icon }) => {

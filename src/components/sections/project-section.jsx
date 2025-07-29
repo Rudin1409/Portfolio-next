@@ -99,14 +99,15 @@ const techSkills = [
         skills: [
             { name: "Node.js", icon: "Nodejs" },
             { name: "Express", icon: "Express" },
-            { name: "Python", icon: "Python" }
+            { name: "Python", icon: "Python" },
+            { name: "Laravel", icon: "Laravel" },
         ]
     },
     {
         category: "Database",
         skills: [
             { name: "MongoDB", icon: "Mongodb" },
-            { name: "PostgreSQL", icon: "Postgresql" },
+            { name: "MySQL", icon: "Mysql" },
         ]
     },
     {
