@@ -9,13 +9,13 @@ export function Footer() {
       <div className="container mx-auto max-w-7xl px-4 md:px-6 flex justify-between items-center">
         <p className="text-sm">Copyright © {currentYear} Zain Ahmad Fahrezi.</p>
         <div className="flex items-center gap-4">
-          <Link href="https://github.com/ZainAhmadF28" target="_blank" aria-label="GitHub">
+          <Link href="https://github.com/ZainAhmadF28" target="_blank" aria-label="GitHub" className="cursor-target">
             <Github className="h-6 w-6 text-white transition-colors hover:text-primary" />
           </Link>
-          <Link href="https://www.linkedin.com/in/zain-ahmad-f/" target="_blank" aria-label="LinkedIn">
+          <Link href="https://www.linkedin.com/in/zain-ahmad-f/" target="_blank" aria-label="LinkedIn" className="cursor-target">
             <Linkedin className="h-6 w-6 text-white transition-colors hover:text-primary" />
           </Link>
-          <Link href="#" aria-label="Twitter">
+          <Link href="#" aria-label="Twitter" className="cursor-target">
             <Twitter className="h-6 w-6 text-white transition-colors hover:text-primary" />
           </Link>
         </div>

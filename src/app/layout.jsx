@@ -6,7 +6,7 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { Preloader } from '@/components/preloader';
-import SplashCursor from '@/components/fluid-cursor';
+import TargetCursor from '@/components/TargetCursor';
 import Lightning from '@/components/Lightning';
 
 const metadata = {
@@ -40,7 +40,7 @@ export default function RootLayout({
           <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Roboto+Mono&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet" />
         </head>
         <body className="antialiased">
-          <SplashCursor />
+          <TargetCursor />
           <Preloader onEnter={handleEnter} />
         </body>
       </html>
@@ -62,7 +62,10 @@ export default function RootLayout({
           speed={0.8}
           size={0.8}
         />
-        <SplashCursor />
+        <TargetCursor 
+            spinDuration={5}
+            hideDefaultCursor={true}
+        />
         <Header />
         <main className="relative overflow-x-hidden">{children}</main>
         <Footer />

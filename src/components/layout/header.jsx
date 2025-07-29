@@ -35,14 +35,14 @@ export function Header() {
         <div className="absolute bottom-0 left-0 w-full h-1 bg-primary/30" style={{ clipPath: 'polygon(5% 0, 95% 0, 100% 100%, 0 100%)' }}></div>
         <nav className="hidden items-center gap-8 md:flex">
           {navLinksLeft.map(({ href, label }) => (
-            <Link key={href} href={href} className="text-lg font-headline font-semibold uppercase tracking-wider transition-colors hover:text-primary text-foreground">
+            <Link key={href} href={href} className="text-lg font-headline font-semibold uppercase tracking-wider transition-colors hover:text-primary text-foreground cursor-target">
               {label}
             </Link>
           ))}
         </nav>
 
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-            <Link href="#home" className="flex items-center gap-2">
+            <Link href="#home" className="flex items-center gap-2 cursor-target">
                 <ZLogo />
                 <div className="flex flex-col">
                     <span className="text-xl font-bold text-foreground tracking-wider font-headline">ZAIN AHMAD FAHREZI</span>
@@ -53,19 +53,19 @@ export function Header() {
 
         <nav className="hidden items-center gap-8 md:flex">
           {navLinksRight.map(({ href, label }) => (
-            <Link key={href} href={href} className="text-lg font-headline font-semibold uppercase tracking-wider transition-colors hover:text-primary text-foreground">
+            <Link key={href} href={href} className="text-lg font-headline font-semibold uppercase tracking-wider transition-colors hover:text-primary text-foreground cursor-target">
               {label}
             </Link>
           ))}
         </nav>
         
         <div className="md:hidden flex-1">
-             <Link href="#home" className="flex items-center gap-2">
+             <Link href="#home" className="flex items-center gap-2 cursor-target">
                 <ZLogo />
             </Link>
         </div>
         <div className="md:hidden">
-            <button onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
+            <button onClick={() => setMobileMenuOpen(!isMobileMenuOpen)} className="cursor-target">
                 {isMobileMenuOpen ? <X className="h-8 w-8 text-foreground"/> : <Menu className="h-8 w-8 text-foreground" />}
             </button>
         </div>
@@ -78,7 +78,7 @@ export function Header() {
                       key={href}
                       href={href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="text-xl font-headline font-semibold uppercase tracking-wider transition-colors hover:text-primary text-foreground"
+                      className="text-xl font-headline font-semibold uppercase tracking-wider transition-colors hover:text-primary text-foreground cursor-target"
                     >
                       {label}
                     </Link>
