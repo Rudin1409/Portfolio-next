@@ -24,9 +24,9 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-background/80 text-white py-4 border-t border-border">
-      <div className="container mx-auto max-w-7xl px-4 md:px-6 flex justify-between items-center">
-        <p className="text-sm text-foreground/70">Copyright © {currentYear} M. Bahrudin.</p>
+    <footer className="bg-background/80 text-white py-6 border-t border-border">
+      <div className="container mx-auto max-w-7xl px-4 md:px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p className="text-sm text-center sm:text-left text-foreground/70">Copyright © {currentYear} M. Bahrudin.</p>
         <div className="flex items-center gap-4">
           <Link href="#" target="_blank" aria-label="GitHub" className="cursor-target">
             <Github className="h-6 w-6 text-foreground transition-colors hover:text-primary" />

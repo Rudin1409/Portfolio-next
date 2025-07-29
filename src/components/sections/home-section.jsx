@@ -11,7 +11,7 @@ const skills = ["Web Dev", "AI/ML", "Next.js", "Python"];
 
 export function HomeSection() {
   return (
-    <section id="home" className="container mx-auto flex min-h-[calc(100vh-6rem)] max-w-7xl items-center px-4 md:px-6">
+    <section id="home" className="container mx-auto flex min-h-[calc(100vh-5rem)] md:min-h-[calc(100vh-6rem)] max-w-7xl items-center px-4 md:px-6">
       <div className="grid w-full items-center gap-8 md:grid-cols-2 lg:gap-12">
         <div className="space-y-6">
          <Fade direction="left" triggerOnce>
@@ -19,10 +19,10 @@ export function HomeSection() {
                 <Sparkles className="mr-2 h-4 w-4" />
                 Innovation For the Future
             </Button>
-            <h1 className="text-8xl font-bold tracking-tighter sm:text-6xl md:text-8xl text-foreground font-headline uppercase text-glow">
+            <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold tracking-tighter text-foreground font-headline uppercase text-glow">
                 WELCOME TO MY PORTFOLIO
             </h1>
-            <h2 className="text-5xl font-bold text-primary font-headline uppercase">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary font-headline uppercase">
                 <Typewriter
                     words={['Web Developer', 'AI Enthusiast', 'Tech Explorer']}
                     loop={true}
@@ -33,7 +33,7 @@ export function HomeSection() {
                     delaySpeed={1500}
                 />
             </h2>
-            <p className="max-w-md text-lg text-foreground/80 md:text-xl font-body">
+            <p className="max-w-md text-base md:text-xl text-foreground/80 font-body">
                 I build innovative web solutions and explore the world of Artificial Intelligence with modern technologies.
             </p>
             <div className="flex flex-wrap items-center gap-4">

@@ -46,11 +46,11 @@ const socialLinks = [
 
 export function SocialsSection() {
   return (
-    <section id="socials" className="py-24">
+    <section id="socials" className="py-16 md:py-24">
       <div className="container mx-auto max-w-2xl px-4 md:px-6">
         <Fade direction="up" triggerOnce>
-          <div className="bg-secondary/50 p-8 rounded-lg border border-border">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-8 font-headline uppercase tracking-wider">
+          <div className="bg-secondary/50 p-6 md:p-8 rounded-lg border border-border">
+            <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-8 font-headline uppercase tracking-wider">
               Connect With Me
             </h2>
             <div className="flex flex-col gap-4">
@@ -61,7 +61,7 @@ export function SocialsSection() {
                   >
                     <div className="mr-4">{link.icon}</div>
                     <div>
-                      <h3 className="font-bold text-lg text-white">
+                      <h3 className="font-bold text-base md:text-lg text-white">
                         {link.name}
                       </h3>
                       <p className="text-sm text-gray-300">

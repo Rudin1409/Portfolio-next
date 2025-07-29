@@ -71,30 +71,30 @@ export function ContactSection() {
     };
 
     return (
-        <section id="contact" className="relative py-24 overflow-hidden">
+        <section id="contact" className="relative py-16 md:py-24 overflow-hidden">
             <div className="relative container mx-auto px-4 md:px-6">
                 <Fade direction="up" triggerOnce>
                     <div className="text-center">
-                        <h2 className="text-6xl md:text-8xl font-bold font-headline uppercase tracking-tight">
+                        <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold font-headline uppercase tracking-tight">
                             <span className="text-foreground text-glow">
                                 Get In
                             </span>
                             <span className="text-primary"> Touch</span>
                         </h2>
-                        <p className="mt-4 text-lg md:text-xl text-foreground/70 font-headline uppercase tracking-wider">
+                        <p className="mt-4 text-base md:text-xl text-foreground/70 font-headline uppercase tracking-wider">
                             Have a project in mind or want to collaborate? Let's talk.
                         </p>
                     </div>
                 </Fade>
 
-                <div className="max-w-7xl mx-auto mt-16 grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div className="max-w-7xl mx-auto mt-12 md:mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
                     <Fade direction="left" triggerOnce delay={200}>
-                        <div className="bg-secondary/50 p-8 rounded-lg border border-border">
+                        <div className="bg-secondary/50 p-6 md:p-8 rounded-lg border border-border">
                             <div className="flex items-center gap-4 mb-6">
                                 <MessageSquare className="h-8 w-8 text-primary" />
                                 <div>
-                                    <h3 className="text-2xl font-bold font-headline text-foreground">Leave a Comment</h3>
-                                    <p className="text-foreground/70">Share your thoughts!</p>
+                                    <h3 className="text-xl md:text-2xl font-bold font-headline text-foreground">Leave a Comment</h3>
+                                    <p className="text-sm md:text-base text-foreground/70">Share your thoughts!</p>
                                 </div>
                             </div>
                             <Form {...form}>
@@ -145,21 +145,21 @@ export function ContactSection() {
                      <Fade direction="right" triggerOnce delay={200}>
                         <div className="space-y-8">
                              <div className="flex items-center gap-4">
-                                <h3 className="text-2xl font-bold font-headline text-foreground">Comments ({comments.length})</h3>
+                                <h3 className="text-xl md:text-2xl font-bold font-headline text-foreground">Comments ({comments.length})</h3>
                             </div>
-                            <div className="space-y-6 max-h-[350px] overflow-y-auto pr-4">
+                            <div className="space-y-6 max-h-[350px] overflow-y-auto pr-2 sm:pr-4">
                                 {comments.map((comment) => (
-                                    <div key={comment.id} className="flex items-start gap-4 bg-secondary/50 p-6 rounded-lg border border-border">
+                                    <div key={comment.id} className="flex items-start gap-4 bg-secondary/50 p-4 md:p-6 rounded-lg border border-border">
                                         <Avatar>
                                             <AvatarImage src={`https://placehold.co/40x40.png?text=${comment.avatar}`} />
                                             <AvatarFallback>{comment.avatar}</AvatarFallback>
                                         </Avatar>
                                         <div className="flex-1">
                                             <div className="flex items-center justify-between">
-                                                <p className="font-bold text-foreground">{comment.name}</p>
+                                                <p className="font-bold text-foreground text-sm md:text-base">{comment.name}</p>
                                                 <p className="text-xs text-foreground/50">{comment.date}</p>
                                             </div>
-                                            <p className="mt-2 text-foreground/80">{comment.text}</p>
+                                            <p className="mt-2 text-foreground/80 text-sm md:text-base">{comment.text}</p>
                                             <div className="mt-4 flex items-center gap-2">
                                                 <Button variant="ghost" size="icon" onClick={() => handleLike(comment.id)} className="h-8 w-8 text-foreground/60 hover:text-primary hover:bg-primary/10 cursor-target">
                                                     <Heart className={`h-4 w-4 ${comment.likes > 0 ? 'text-primary fill-current' : ''}`} />

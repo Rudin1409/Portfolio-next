@@ -27,7 +27,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full">
       <div 
-        className="container mx-auto flex h-24 max-w-7xl items-center justify-between px-4 md:px-6 relative bg-background/80 backdrop-blur-sm"
+        className="container mx-auto flex h-20 md:h-24 max-w-7xl items-center justify-between px-4 md:px-6 relative bg-background/80 backdrop-blur-sm"
         style={{
           clipPath: 'polygon(0 0, 100% 0, 100% 85%, 95% 100%, 5% 100%, 0 85%)'
         }}
@@ -35,7 +35,7 @@ export function Header() {
         <div className="absolute bottom-0 left-0 w-full h-1 bg-primary/30" style={{ clipPath: 'polygon(5% 0, 95% 0, 100% 100%, 0 100%)' }}></div>
         <nav className="hidden items-center gap-8 md:flex">
           {navLinksLeft.map(({ href, label }) => (
-            <Link key={href} href={href} className="text-lg font-headline font-semibold uppercase tracking-wider transition-colors hover:text-primary text-foreground cursor-target">
+            <Link key={href} href={href} className="text-base md:text-lg font-headline font-semibold uppercase tracking-wider transition-colors hover:text-primary text-foreground cursor-target">
               {label}
             </Link>
           ))}
@@ -43,17 +43,19 @@ export function Header() {
 
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
             <Link href="#home" className="flex items-center gap-2 cursor-target">
-                <ZLogo />
-                <div className="flex flex-col">
-                    <span className="text-xl font-bold text-foreground tracking-wider font-headline">M. BAHRUDIN</span>
-                    <span className="text-xs text-primary tracking-widest font-body">WEB & AI ENTHUSIAST</span>
+                <div className="hidden md:block">
+                    <ZLogo />
+                </div>
+                <div className="flex flex-col text-center md:text-left">
+                    <span className="text-lg md:text-xl font-bold text-foreground tracking-wider font-headline">M. BAHRUDIN</span>
+                    <span className="text-[10px] md:text-xs text-primary tracking-widest font-body">WEB & AI ENTHUSIAST</span>
                 </div>
             </Link>
         </div>
 
         <nav className="hidden items-center gap-8 md:flex">
           {navLinksRight.map(({ href, label }) => (
-            <Link key={href} href={href} className="text-lg font-headline font-semibold uppercase tracking-wider transition-colors hover:text-primary text-foreground cursor-target">
+            <Link key={href} href={href} className="text-base md:text-lg font-headline font-semibold uppercase tracking-wider transition-colors hover:text-primary text-foreground cursor-target">
               {label}
             </Link>
           ))}
@@ -71,7 +73,7 @@ export function Header() {
         </div>
 
         {isMobileMenuOpen && (
-            <div className="absolute top-24 left-0 w-full bg-background/95 md:hidden">
+            <div className="absolute top-20 left-0 w-full bg-background/95 md:hidden">
                  <nav className="flex flex-col items-center gap-6 py-6">
                   {[...navLinksLeft, ...navLinksRight].map(({ href, label }) => (
                     <Link

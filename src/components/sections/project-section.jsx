@@ -138,7 +138,7 @@ export function ProjectSection() {
                         <div key={category}>
                             <h3 className="text-2xl font-bold text-primary mb-2 text-center">{category}</h3>
                             <Separator className="bg-border mb-6" />
-                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8">
                                 {skills.map((skill, index) => (
                                      <SkillCard key={index} name={skill.name}>
                                         <TechIcon icon={skill.icon} />
@@ -156,30 +156,30 @@ export function ProjectSection() {
   };
 
   return (
-    <section id="projects" className="py-24" style={{
+    <section id="projects" className="py-16 md:py-24" style={{
         backgroundImage: 'linear-gradient(rgba(15, 25, 35, 0.9), rgba(15, 25, 35, 0.9)), radial-gradient(hsl(var(--primary) / 0.1) 1px, transparent 1px)',
         backgroundSize: 'cover, 2rem 2rem'
     }}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-center mb-12">
-            <h2 className="text-5xl font-bold font-headline uppercase tracking-wider text-center">
+            <h2 className="text-4xl md:text-5xl font-bold font-headline uppercase tracking-wider text-center">
                 <span className="text-foreground text-glow">Portfolio</span> <span className="text-primary">Showcase</span>
             </h2>
         </div>
 
         <div className="flex justify-center mb-12">
-          <div className="bg-[#1a242f] rounded-full p-2 flex items-center gap-2 border border-border">
+          <div className="bg-[#1a242f] rounded-full p-1.5 md:p-2 flex flex-col sm:flex-row items-center gap-2 border border-border w-full sm:w-auto">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-2 py-3 px-8 rounded-full text-lg font-semibold transition-all duration-300 cursor-target ${
+                className={`flex w-full sm:w-auto justify-center items-center gap-2 py-2.5 px-4 md:py-3 md:px-8 rounded-full text-sm md:text-lg font-semibold transition-all duration-300 cursor-target ${
                   activeTab === tab.id
                     ? "bg-[#0f1923] text-primary shadow-lg"
                     : "text-foreground/70 hover:bg-white/5"
                 }`}
               >
-                <tab.icon className="w-6 h-6" />
+                <tab.icon className="w-5 h-5 md:w-6 md:h-6" />
                 <span>{tab.label}</span>
               </button>
             ))}
