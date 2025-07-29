@@ -39,11 +39,11 @@ const projects = [
 
 const certificates = [
   {
-    title: "Cloud Engineering",
+    title: "Front-End Web Pemula",
     issuer: "Dicoding Indonesia",
-    date: "Jan 2024",
-    imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "cloud certificate",
+    date: "Juni 2023",
+    imageUrl: "/sertifikat/1.png",
+    imageHint: "frontend certificate",
   },
   {
     title: "Machine Learning",
