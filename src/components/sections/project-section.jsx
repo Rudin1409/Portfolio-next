@@ -162,24 +162,24 @@ export function ProjectSection() {
     }}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold font-headline uppercase tracking-wider text-center">
+            <h2 className="text-4xl sm:text-5xl font-bold font-headline uppercase tracking-wider text-center">
                 <span className="text-foreground text-glow">Portfolio</span> <span className="text-primary">Showcase</span>
             </h2>
         </div>
 
         <div className="flex justify-center mb-12">
-          <div className="bg-[#1a242f] rounded-full p-1.5 md:p-2 flex flex-col sm:flex-row items-center gap-2 border border-border w-full sm:w-auto">
+          <div className="bg-[#1a242f] rounded-full p-1.5 flex items-center gap-1 border border-border">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex w-full sm:w-auto justify-center items-center gap-2 py-2.5 px-4 md:py-3 md:px-8 rounded-full text-sm md:text-lg font-semibold transition-all duration-300 cursor-target ${
+                className={`flex justify-center items-center gap-2 py-2 px-3 sm:py-2.5 sm:px-6 rounded-full text-xs sm:text-base font-semibold transition-all duration-300 cursor-target ${
                   activeTab === tab.id
                     ? "bg-[#0f1923] text-primary shadow-lg"
                     : "text-foreground/70 hover:bg-white/5"
                 }`}
               >
-                <tab.icon className="w-5 h-5 md:w-6 md:h-6" />
+                <tab.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>{tab.label}</span>
               </button>
             ))}
