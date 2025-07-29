@@ -15,24 +15,6 @@ body {
   position: relative;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  background: radial-gradient(
-    circle at var(--x) var(--y),
-    rgba(120, 81, 255, 0.2),
-    rgba(120, 81, 255, 0.1),
-    transparent 40%
-  );
-  z-index: 1000;
-}
-
-
 @layer base {
   :root {
     --background: 240 10% 10%;

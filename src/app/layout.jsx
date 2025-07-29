@@ -6,6 +6,7 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { Preloader } from '@/components/preloader';
+import FluidCursor from '@/components/fluid-cursor';
 
 const metadata = {
   title: 'Zain | Portfolio',
@@ -24,19 +25,6 @@ export default function RootLayout({
       document.title = metadata.title;
     }
   }, [loading]);
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      document.body.style.setProperty('--x', `${e.clientX}px`);
-      document.body.style.setProperty('--y', `${e.clientY}px`);
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
   
   const handleEnter = () => {
     setLoading(false);
@@ -66,6 +54,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Mono&display=swap" rel="stylesheet" />
       </head>
       <body className="antialiased">
+        <FluidCursor />
         <Header />
         <main className="relative overflow-x-hidden">{children}</main>
         <Footer />
