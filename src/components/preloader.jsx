@@ -31,14 +31,7 @@ export function Preloader({ onEnter }) {
       </div>
       
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
-        <button
-          onClick={onEnter}
-          className="rounded-full border-2 border-white p-2 animate-bounce mb-4"
-          aria-label="Enter website"
-        >
-          <ArrowDown className="h-6 w-6 text-white" />
-        </button>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 mb-4">
             <a href="https://github.com/ZainAhmadF28" target="_blank" aria-label="GitHub">
               <Github className="h-7 w-7 text-white transition-colors hover:text-primary" />
             </a>
@@ -49,6 +42,13 @@ export function Preloader({ onEnter }) {
               <Instagram className="h-7 w-7 text-white transition-colors hover:text-primary" />
             </a>
         </div>
+        <button
+          onClick={onEnter}
+          className="rounded-full border-2 border-white p-2 animate-bounce"
+          aria-label="Enter website"
+        >
+          <ArrowDown className="h-6 w-6 text-white" />
+        </button>
       </div>
     </div>
   );
