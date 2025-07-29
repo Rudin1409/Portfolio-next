@@ -31,27 +31,27 @@
 .corner-tl {
   top: 0;
   left: 0;
-  transform: translate(-150%, -150%);
+  transform: translate(-16px, -16px);
   border-width: 3px 0 0 3px;
 }
 
 .corner-tr {
   top: 0;
-  right: 0;
-  transform: translate(50%, -150%);
+  left: 0;
+  transform: translate(4px, -16px);
   border-width: 3px 3px 0 0;
 }
 
 .corner-br {
-  bottom: 0;
-  right: 0;
-  transform: translate(50%, 50%);
+  top: 0;
+  left: 0;
+  transform: translate(4px, 4px);
   border-width: 0 3px 3px 0;
 }
 
 .corner-bl {
-  bottom: 0;
+  top: 0;
   left: 0;
-  transform: translate(-150%, 50%);
+  transform: translate(-16px, 4px);
   border-width: 0 0 3px 3px;
 }

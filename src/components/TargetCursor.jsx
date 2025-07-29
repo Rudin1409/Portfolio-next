@@ -141,16 +141,16 @@ const TargetCursor = ({
           y: rect.top - cursorCenterY - borderWidth,
         };
         let trOffset = {
-          x: rect.right - cursorCenterX + borderWidth - cornerSize,
+          x: rect.right - cursorCenterX + borderWidth,
           y: rect.top - cursorCenterY - borderWidth,
         };
         let brOffset = {
-          x: rect.right - cursorCenterX + borderWidth - cornerSize,
-          y: rect.bottom - cursorCenterY + borderWidth - cornerSize,
+          x: rect.right - cursorCenterX + borderWidth,
+          y: rect.bottom - cursorCenterY + borderWidth,
         };
         let blOffset = {
           x: rect.left - cursorCenterX - borderWidth,
-          y: rect.bottom - cursorCenterY + borderWidth - cornerSize,
+          y: rect.bottom - cursorCenterY + borderWidth,
         };
 
         if (mouseX !== undefined && mouseY !== undefined) {
@@ -170,20 +170,15 @@ const TargetCursor = ({
         }
 
         const tl = gsap.timeline();
-        const corners = [tlc, trc, brc, blc];
-        const offsets = [tlOffset, trOffset, brOffset, blOffset];
-
-        corners.forEach((corner, index) => {
-          tl.to(
-            corner,
-            {
-              x: offsets[index].x,
-              y: offsets[index].y,
-              duration: 0.2,
-              ease: "power2.out",
-            },
-            0
-          );
+        const corners = [
+          { el: tlc, x: tlOffset.x, y: tlOffset.y },
+          { el: trc, x: trOffset.x, y: trOffset.y },
+          { el: brc, x: brOffset.x, y: brOffset.y },
+          { el: blc, x: blOffset.x, y: blOffset.y }
+        ];
+        
+        corners.forEach(({ el, x, y }) => {
+          tl.to(el, { x, y, duration: 0.2, ease: "power2.out" }, 0);
         });
       };
 
@@ -212,12 +207,11 @@ const TargetCursor = ({
           const corners = Array.from(cornersRef.current);
           gsap.killTweensOf(corners);
 
-          const { cornerSize } = constants;
           const positions = [
-            { x: -cornerSize * 1.5, y: -cornerSize * 1.5 },
-            { x: cornerSize * 0.5, y: -cornerSize * 1.5 },
-            { x: cornerSize * 0.5, y: cornerSize * 0.5 },
-            { x: -cornerSize * 1.5, y: cornerSize * 0.5 },
+            { x: -16, y: -16 },
+            { x: 4,  y: -16 },
+            { x: 4,  y: 4 },
+            { x: -16, y: 4 },
           ];
 
           const tl = gsap.timeline();
