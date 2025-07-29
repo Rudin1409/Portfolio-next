@@ -1,8 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Shield, Menu, X, Bot } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const navLinksLeft = [
@@ -53,9 +52,6 @@ export function Header() {
               {label}
             </Link>
           ))}
-           <Link href="#" aria-label="Security">
-              <Shield className="h-7 w-7 text-white transition-colors hover:text-primary" />
-           </Link>
         </nav>
         
         <div className="md:hidden flex-1">
@@ -82,17 +78,11 @@ export function Header() {
                       {label}
                     </Link>
                   ))}
-                   <Link href="#" aria-label="Security" onClick={() => setMobileMenuOpen(false)}>
-                        <Shield className="h-7 w-7 text-white transition-colors hover:text-primary" />
-                   </Link>
                 </nav>
             </div>
         )}
       </div>
        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[40%] h-[2px] bg-primary/50" style={{ clipPath: 'polygon(15% 0, 85% 0, 100% 100%, 0% 100%)' }}></div>
-       <div className="absolute right-6 top-1/2 -translate-y-1/2 p-2 bg-cyan-500/10 rounded-full border border-cyan-500/50 hidden md:block">
-            <Bot className="h-7 w-7 text-cyan-400" />
-       </div>
     </header>
   );
 }

@@ -19,7 +19,7 @@ export function HomeSection() {
                 <Sparkles className="mr-2 h-4 w-4" />
                 Innovation For the Future
             </Button>
-            <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl text-white text-glow">
+            <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl text-white text-glow">
                 WELCOME TO MY PORTFOLIO
             </h1>
             <h2 className="text-4xl font-bold text-cyan-400">
