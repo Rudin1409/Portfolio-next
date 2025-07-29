@@ -1,6 +1,8 @@
 "use client";
 import { Github, Instagram, Bot, ArrowDown } from 'lucide-react';
-import Dither from './Dither';
+import dynamic from 'next/dynamic';
+
+const Dither = dynamic(() => import('./Dither'), { ssr: false });
 
 export function Preloader({ onEnter }) {
   return (
