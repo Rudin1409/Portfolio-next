@@ -4,14 +4,11 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
-const navLinksLeft = [
+const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
-];
-
-const navLinksRight = [
-    { href: "#projects", label: "Project" },
-    { href: "#contact", label: "Contact" },
+  { href: "#projects", label: "Project" },
+  { href: "#contact", label: "Contact" },
 ];
 
 const ZLogo = () => (
@@ -33,8 +30,9 @@ export function Header() {
         }}
       >
         <div className="absolute bottom-0 left-0 w-full h-1 bg-primary/30" style={{ clipPath: 'polygon(5% 0, 95% 0, 100% 100%, 0 100%)' }}></div>
+        
         <nav className="hidden items-center gap-8 md:flex">
-          {navLinksLeft.map(({ href, label }) => (
+          {navLinks.slice(0, 2).map(({ href, label }) => (
             <Link key={href} href={href} className="text-base md:text-lg font-headline font-semibold uppercase tracking-wider transition-colors hover:text-primary text-foreground cursor-target">
               {label}
             </Link>
@@ -54,7 +52,7 @@ export function Header() {
         </div>
 
         <nav className="hidden items-center gap-8 md:flex">
-          {navLinksRight.map(({ href, label }) => (
+          {navLinks.slice(2).map(({ href, label }) => (
             <Link key={href} href={href} className="text-base md:text-lg font-headline font-semibold uppercase tracking-wider transition-colors hover:text-primary text-foreground cursor-target">
               {label}
             </Link>
@@ -67,28 +65,28 @@ export function Header() {
             </Link>
         </div>
         <div className="md:hidden">
-            <button onClick={() => setMobileMenuOpen(!isMobileMenuOpen)} className="cursor-target">
+            <button onClick={() => setMobileMenuOpen(!isMobileMenuOpen)} className="cursor-target z-50">
                 {isMobileMenuOpen ? <X className="h-8 w-8 text-foreground"/> : <Menu className="h-8 w-8 text-foreground" />}
             </button>
         </div>
-
-        {isMobileMenuOpen && (
-            <div className="absolute top-full left-0 w-full bg-background/95 md:hidden">
-                 <nav className="flex flex-col items-center gap-6 py-6">
-                  {[...navLinksLeft, ...navLinksRight].map(({ href, label }) => (
-                    <Link
-                      key={href}
-                      href={href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="text-xl font-headline font-semibold uppercase tracking-wider transition-colors hover:text-primary text-foreground cursor-target"
-                    >
-                      {label}
-                    </Link>
-                  ))}
-                </nav>
-            </div>
-        )}
       </div>
+      
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-40 bg-background/95 backdrop-blur-sm md:hidden">
+            <nav className="flex flex-col items-center justify-center h-full gap-8">
+              {navLinks.map(({ href, label }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-3xl font-headline font-semibold uppercase tracking-wider transition-colors hover:text-primary text-foreground cursor-target"
+                >
+                  {label}
+                </Link>
+              ))}
+            </nav>
+        </div>
+      )}
     </header>
   );
 }
