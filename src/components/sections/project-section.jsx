@@ -66,6 +66,13 @@ const certificates = [
     imageUrl: "/sertifikat/4.png",
     imageHint: "mikrotik mtcna certificate",
   },
+  {
+    title: "Fiber Optic",
+    issuer: "LS Cabeling",
+    date: "2023",
+    imageUrl: "/sertifikat/5.png",
+    imageHint: "fiber optic certificate",
+  },
 ];
 
 const techSkills = [
