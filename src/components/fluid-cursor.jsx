@@ -40,7 +40,7 @@ const FluidCursor = (props) => {
       color: { r: 0, g: 0, b: 0 }
     };
     
-    const pointers = [pointerPrototype];
+    const pointers = [Object.create(pointerPrototype)];
     const splatStack = [];
 
     const config = {
