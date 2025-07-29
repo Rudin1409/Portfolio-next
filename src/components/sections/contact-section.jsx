@@ -12,34 +12,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Send, Heart, MessageSquare, Camera } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
 
 const commentSchema = z.object({
     name: z.string().min(2, { message: "Name must be at least 2 characters." }),
     comment: z.string().min(3, { message: "Comment must be at least 3 characters." }),
 });
 
-const initialComments = [
-    {
-        id: 1,
-        name: "RDN",
-        avatar: "R",
-        date: "29 Juli 2025 pukul 13.30",
-        text: "Hebat banget kk keren",
-        likes: 0,
-    },
-    {
-        id: 2,
-        name: "hhdf",
-        avatar: "H",
-        date: "29 Juli 2025 pukul 10.36",
-        text: "nsdkjfng",
-        likes: 0,
-    },
-];
-
 export function ContactSection() {
-    const [comments, setComments] = useState(initialComments);
+    const [comments, setComments] = useState([]);
 
     const form = useForm({
         resolver: zodResolver(commentSchema),
