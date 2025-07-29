@@ -18,17 +18,11 @@ export default function RootLayout({
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-
     if (loading) {
       document.title = 'Welcome';
     } else {
       document.title = metadata.title;
     }
-
-    return () => clearTimeout(timer);
   }, [loading]);
 
   useEffect(() => {
@@ -43,6 +37,10 @@ export default function RootLayout({
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
+  
+  const handleEnter = () => {
+    setLoading(false);
+  };
 
   if (loading) {
     return (
@@ -53,7 +51,7 @@ export default function RootLayout({
           <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Roboto+Mono&display=swap" rel="stylesheet" />
         </head>
         <body className="antialiased">
-          <Preloader />
+          <Preloader onEnter={handleEnter} />
         </body>
       </html>
     );

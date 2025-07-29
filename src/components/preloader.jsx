@@ -1,8 +1,8 @@
 "use client";
-import { Github, Linkedin, Instagram, Bot } from 'lucide-react';
+import { Github, Linkedin, Instagram, Bot, ArrowDown } from 'lucide-react';
 import { Typewriter } from 'react-simple-typewriter'
 
-export function Preloader() {
+export function Preloader({ onEnter }) {
   return (
     <div className="fixed inset-0 bg-[#121212] flex flex-col items-center justify-center z-[100] text-white">
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -40,16 +40,25 @@ export function Preloader() {
         </p>
       </div>
       
-      <div className="absolute bottom-1/4 left-1/2 -translate-x-1/2 flex items-center gap-6">
-        <a href="https://github.com/ZainAhmadF28" target="_blank" aria-label="GitHub">
-          <Github className="h-7 w-7 text-white transition-colors hover:text-primary" />
-        </a>
-        <a href="https://www.linkedin.com/in/zain-ahmad-f/" target="_blank" aria-label="LinkedIn">
-          <Linkedin className="h-7 w-7 text-white transition-colors hover:text-primary" />
-        </a>
-        <a href="#" aria-label="Instagram">
-          <Instagram className="h-7 w-7 text-white transition-colors hover:text-primary" />
-        </a>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
+        <button
+          onClick={onEnter}
+          className="rounded-full border-2 border-white p-2 animate-bounce"
+          aria-label="Enter website"
+        >
+          <ArrowDown className="h-6 w-6 text-white" />
+        </button>
+        <div className="flex items-center gap-6">
+            <a href="https://github.com/ZainAhmadF28" target="_blank" aria-label="GitHub">
+              <Github className="h-7 w-7 text-white transition-colors hover:text-primary" />
+            </a>
+            <a href="https://www.linkedin.com/in/zain-ahmad-f/" target="_blank" aria-label="LinkedIn">
+              <Linkedin className="h-7 w-7 text-white transition-colors hover:text-primary" />
+            </a>
+            <a href="#" aria-label="Instagram">
+              <Instagram className="h-7 w-7 text-white transition-colors hover:text-primary" />
+            </a>
+        </div>
       </div>
     </div>
   );
