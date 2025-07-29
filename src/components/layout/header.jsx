@@ -25,8 +25,14 @@ export function Header() {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-sm border-b-2 border-primary/30">
-      <div className="container mx-auto flex h-24 max-w-7xl items-center justify-between px-4 md:px-6 relative">
+    <header className="sticky top-0 z-50 w-full">
+      <div 
+        className="container mx-auto flex h-24 max-w-7xl items-center justify-between px-4 md:px-6 relative bg-background/80 backdrop-blur-sm"
+        style={{
+          clipPath: 'polygon(0 0, 100% 0, 100% 85%, 95% 100%, 5% 100%, 0 85%)'
+        }}
+      >
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-primary/30" style={{ clipPath: 'polygon(5% 0, 95% 0, 100% 100%, 0 100%)' }}></div>
         <nav className="hidden items-center gap-8 md:flex">
           {navLinksLeft.map(({ href, label }) => (
             <Link key={href} href={href} className="text-lg font-headline font-semibold uppercase tracking-wider transition-colors hover:text-primary text-foreground">
