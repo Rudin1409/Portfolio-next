@@ -3,11 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Instagram, Sparkles } from "lucide-react";
+import { Github, Linkedin, Instagram, Sparkles, Bot } from "lucide-react";
 import { Fade } from "react-awesome-reveal";
 import { Typewriter } from 'react-simple-typewriter'
 
-const skills = ["React", "Javascript", "Node.js", "Tailwind"];
+const skills = ["Web Dev", "AI/ML", "Next.js", "Python"];
 
 export function HomeSection() {
   return (
@@ -24,7 +24,7 @@ export function HomeSection() {
             </h1>
             <h2 className="text-5xl font-bold text-primary font-headline uppercase">
                 <Typewriter
-                    words={['Front End Developer', 'Web Designer', 'UI/UX Enthusiast']}
+                    words={['Web Developer', 'AI Enthusiast', 'Tech Explorer']}
                     loop={true}
                     cursor
                     cursorStyle='_'
@@ -34,7 +34,7 @@ export function HomeSection() {
                 />
             </h2>
             <p className="max-w-md text-lg text-foreground/80 md:text-xl font-body">
-                I craft responsive and visually engaging websites using React, Tailwind CSS, and modern web technologies.
+                I build innovative web solutions and explore the world of Artificial Intelligence with modern technologies.
             </p>
             <div className="flex flex-wrap items-center gap-4">
                 {skills.map(skill => (
@@ -44,7 +44,7 @@ export function HomeSection() {
                 ))}
             </div>
             <div className="flex items-center gap-4">
-               <Link href="https://github.com/ZainAhmadF28" target="_blank" aria-label="GitHub" className="cursor-target">
+               <Link href="#" target="_blank" aria-label="GitHub" className="cursor-target">
                   <div className="p-2 rounded-full bg-gray-800/50 border border-gray-700 hover:bg-gray-700/50 transition-colors">
                     <Github className="h-6 w-6 text-foreground" />
                   </div>
@@ -54,9 +54,9 @@ export function HomeSection() {
                         <Instagram className="h-6 w-6 text-foreground" />
                     </div>
                </Link>
-               <Link href="https://www.linkedin.com/in/zain-ahmad-f/" target="_blank" aria-label="LinkedIn" className="cursor-target">
+               <Link href="#" target="_blank" aria-label="AI Projects" className="cursor-target">
                   <div className="p-2 rounded-full bg-gray-800/50 border border-gray-700 hover:bg-gray-700/50 transition-colors">
-                    <Linkedin className="h-6 w-6 text-foreground" />
+                    <Bot className="h-6 w-6 text-foreground" />
                   </div>
                </Link>
             </div>

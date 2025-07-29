@@ -12,26 +12,26 @@ import { TechIcon } from "@/components/tech-icons";
 
 const projects = [
   {
-    title: "Project Alpha",
-    description: "A cutting-edge web application developed using the latest technologies to solve a complex business problem.",
+    title: "AI-Powered Chatbot",
+    description: "A smart chatbot using Natural Language Processing to understand and respond to user queries in real-time.",
     imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "web application screenshot",
+    imageHint: "chatbot interface",
     projectUrl: "#",
     githubUrl: "#",
   },
   {
-    title: "Project Beta",
-    description: "A mobile-first platform designed for seamless user interaction and engagement, built with a focus on performance.",
+    title: "E-Commerce Analytics Dashboard",
+    description: "A web app for visualizing sales data and customer behavior with interactive charts and graphs.",
     imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "mobile platform interface",
+    imageHint: "dashboard charts",
     projectUrl: "#",
     githubUrl: "#",
   },
   {
-    title: "Project Gamma",
-    description: "An e-commerce site with a custom CMS, providing a robust and scalable solution for online retail.",
+    title: "Portfolio Website",
+    description: "A personal portfolio site built with Next.js and Tailwind CSS to showcase my skills and projects.",
     imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "e-commerce website",
+    imageHint: "portfolio website",
     projectUrl: "#",
     githubUrl: "#",
   },
@@ -39,25 +39,25 @@ const projects = [
 
 const certificates = [
   {
-    title: "Belajar Membuat Aplikasi Web dengan React",
+    title: "Cloud Engineering",
     issuer: "Dicoding Indonesia",
-    date: "Des 2024",
+    date: "Jan 2024",
     imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "React certificate",
+    imageHint: "cloud certificate",
   },
   {
-    title: "Belajar Dasar Pemrograman JavaScript",
+    title: "Machine Learning",
     issuer: "Dicoding Indonesia",
-    date: "Okt 2024",
+    date: "Feb 2024",
     imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "JavaScript certificate",
+    imageHint: "machine learning certificate",
   },
   {
-    title: "Junior Web Developer (BNSP)",
-    issuer: "Badan Nasional Sertifikasi Profesi",
-    date: "Sep 2024",
+    title: "Data Science",
+    issuer: "Oracle Academy",
+    date: "Mar 2024",
     imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "BNSP certificate",
+    imageHint: "data science certificate",
   },
 ];
 
@@ -78,6 +78,7 @@ const techSkills = [
         skills: [
             { name: "Node.js", icon: "Nodejs" },
             { name: "Express", icon: "Express" },
+            { name: "Python", icon: "Python" }
         ]
     },
     {
@@ -88,12 +89,12 @@ const techSkills = [
         ]
     },
     {
-        category: "Tools",
+        category: "Tools & AI",
         skills: [
             { name: "Git & GitHub", icon: "Github" },
             { name: "Vercel", icon: "Vercel" },
             { name: "Figma", icon: "Figma" },
-            { name: "Tools Lain", icon: "Tools" },
+            { name: "Genkit", icon: "Genkit" },
         ]
     },
 ]

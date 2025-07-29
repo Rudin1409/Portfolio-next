@@ -25,14 +25,14 @@ export function AboutSection() {
               HELLO, I'M
             </h3>
             <h2 className="text-7xl font-bold font-headline uppercase text-glow">
-              ZAIN AHMAD FAHREZI
+              M. BAHRUDIN
             </h2>
             <p className="text-lg text-foreground/80 font-body">
-              Saya adalah mahasiswa Teknik Informatika di Universitas Indo Global Mandiri Palembang yang memiliki minat besar dalam pengembangan Front-End dan teknologi web modern. Saya selalu bersemangat untuk belajar hal baru dan menciptakan solusi digital yang inovatif.
+              Saya adalah mahasiswa Manajemen Informatika di Politeknik Negeri Sriwijaya yang memiliki minat besar dalam pengembangan web dan AI. Saya selalu bersemangat untuk belajar teknologi terbaru.
             </p>
             <blockquote className="border-l-4 border-primary pl-4 py-2 bg-secondary/20">
               <p className="text-lg italic text-foreground font-body">
-                "Whoever strives shall succeed."
+                "Code with curiosity, create with passion."
               </p>
             </blockquote>
             <div className="flex gap-4 pt-4">

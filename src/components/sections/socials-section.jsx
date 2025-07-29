@@ -23,15 +23,15 @@ const TikTokIcon = (props) => (
 const socialLinks = [
   {
     name: "GitHub",
-    description: "Follow me on GitHub",
-    href: "https://github.com/ZainAhmadF28",
+    description: "Follow my projects on GitHub",
+    href: "#",
     icon: <Github className="h-8 w-8 text-white" />,
     className: "bg-gray-700/80 hover:bg-gray-700",
   },
   {
     name: "Instagram",
     description: "Follow me on Instagram",
-    href: "https://www.instagram.com/zainahmadf28/",
+    href: "#",
     icon: <Instagram className="h-8 w-8 text-white" />,
     className: "bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600",
   },

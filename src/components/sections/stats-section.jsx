@@ -5,19 +5,19 @@ import { Fade } from "react-awesome-reveal";
 const stats = [
   {
     icon: Code,
-    value: "13",
+    value: "5",
     title: "Total Projects",
-    subtitle: "Innovative web solutions crafted",
+    subtitle: "Innovative web & AI solutions",
   },
   {
     icon: Award,
-    value: "13",
+    value: "10+",
     title: "Certificates",
-    subtitle: "Professional skills validated",
+    subtitle: "Validated skills in tech",
   },
   {
     icon: Globe,
-    value: "3",
+    value: "2",
     title: "Years of Experience",
     subtitle: "Continuous learning journey",
   },

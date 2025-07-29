@@ -45,8 +45,8 @@ export function Header() {
             <Link href="#home" className="flex items-center gap-2 cursor-target">
                 <ZLogo />
                 <div className="flex flex-col">
-                    <span className="text-xl font-bold text-foreground tracking-wider font-headline">ZAIN AHMAD FAHREZI</span>
-                    <span className="text-xs text-primary tracking-widest font-body">LET'S SEE THE AWESOME EXPERIENCE</span>
+                    <span className="text-xl font-bold text-foreground tracking-wider font-headline">M. BAHRUDIN</span>
+                    <span className="text-xs text-primary tracking-widest font-body">WEB & AI ENTHUSIAST</span>
                 </div>
             </Link>
         </div>

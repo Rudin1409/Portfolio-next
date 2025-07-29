@@ -10,8 +10,8 @@ import TargetCursor from '@/components/TargetCursor';
 import Lightning from '@/components/Lightning';
 
 const metadata = {
-  title: 'Zain | Portfolio',
-  description: 'Zain Ahmad F, a passionate full-stack developer.',
+  title: 'Bahrudin | Portfolio',
+  description: 'M. Bahrudin, a passionate web and AI developer.',
 };
 
 export default function RootLayout({
