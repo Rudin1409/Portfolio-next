@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Send, Heart, MessageSquare, Camera } from "lucide-react";
+import { Send, Heart, MessageSquare, Camera, Trash2 } from "lucide-react";
 
 const commentSchema = z.object({
     name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -44,6 +44,10 @@ export function ContactSection() {
     
     const handleLike = (id) => {
         setComments(comments.map(c => c.id === id ? { ...c, likes: c.likes + 1 } : c));
+    };
+
+    const handleDelete = (id) => {
+        setComments(comments.filter(c => c.id !== id));
     };
 
     return (
@@ -141,6 +145,9 @@ export function ContactSection() {
                                                     <Heart className={`h-4 w-4 ${comment.likes > 0 ? 'text-primary fill-current' : ''}`} />
                                                 </Button>
                                                 <span className="text-sm text-foreground/60">{comment.likes}</span>
+                                                <Button variant="ghost" size="icon" onClick={() => handleDelete(comment.id)} className="h-8 w-8 text-foreground/60 hover:text-destructive hover:bg-destructive/10 cursor-target ml-auto">
+                                                    <Trash2 className="h-4 w-4" />
+                                                </Button>
                                             </div>
                                         </div>
                                     </div>
