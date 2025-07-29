@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <HomeSection />
-      <div className="md:hidden -mt-16 mb-8 flex justify-center items-center">
+      <div className="md:hidden mt-8 mb-8 flex justify-center items-center">
         <Fade direction="up" triggerOnce>
           <div className="relative">
             <Image
