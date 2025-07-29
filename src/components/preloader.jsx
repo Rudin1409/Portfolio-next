@@ -1,22 +1,17 @@
 "use client";
 import { Github, Instagram, Bot, ArrowDown } from 'lucide-react';
-import dynamic from 'next/dynamic';
-
-const Dither = dynamic(() => import('./Dither'), { ssr: false });
+import LetterGlitch from './LetterGlitch';
 
 export function Preloader({ onEnter }) {
   return (
     <div className="fixed inset-0 bg-[#0f1923] flex flex-col items-center justify-center z-[100] text-foreground p-4">
       <div className="absolute inset-0 z-0">
-        <Dither
-          waveColor={[0.94, 0.27, 0.33]} // Valorant Red: #ff4655 -> HSL(355, 100%, 64%) -> RGB(1, 0.27, 0.33)
-          disableAnimation={false}
-          enableMouseInteraction={true}
-          mouseRadius={0.3}
-          colorNum={4}
-          waveAmplitude={0.3}
-          waveFrequency={3}
-          waveSpeed={0.05}
+        <LetterGlitch
+          glitchColors={['#ff4655', '#ece8e1', '#45A7F9']}
+          glitchSpeed={50}
+          centerVignette={true}
+          outerVignette={true}
+          smooth={true}
         />
       </div>
 
