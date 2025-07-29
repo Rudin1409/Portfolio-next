@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { Code, Award, Layers } from "lucide-react";
 import { ProjectCard } from "@/components/project-card";
+import { CertificateCard } from "@/components/certificate-card";
 import { SkillCard } from "@/components/skill-card";
 
 const projects = [
@@ -30,6 +31,33 @@ const projects = [
     imageHint: "e-commerce website",
     projectUrl: "#",
     githubUrl: "#",
+  },
+];
+
+const certificates = [
+  {
+    title: "Belajar Membuat Aplikasi Web dengan React",
+    issuer: "Dicoding Indonesia",
+    date: "Des 2024",
+    imageUrl: "https://placehold.co/600x400.png",
+    imageHint: "React certificate",
+    certificateUrl: "#",
+  },
+  {
+    title: "Belajar Dasar Pemrograman JavaScript",
+    issuer: "Dicoding Indonesia",
+    date: "Okt 2024",
+    imageUrl: "https://placehold.co/600x400.png",
+    imageHint: "JavaScript certificate",
+    certificateUrl: "#",
+  },
+  {
+    title: "Junior Web Developer (BNSP)",
+    issuer: "Badan Nasional Sertifikasi Profesi",
+    date: "Sep 2024",
+    imageUrl: "https://placehold.co/600x400.png",
+    imageHint: "BNSP certificate",
+    certificateUrl: "#",
   },
 ];
 
@@ -67,11 +95,10 @@ export function ProjectSection() {
       case "certificates":
         return (
           <Fade key="certificates" direction="up" triggerOnce>
-            <div className="text-center py-16">
-              <h3 className="text-2xl font-bold">Certificates Coming Soon</h3>
-              <p className="text-foreground/70">
-                This section is currently under construction.
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {certificates.map((certificate, index) => (
+                <CertificateCard key={index} {...certificate} />
+              ))}
             </div>
           </Fade>
         );
