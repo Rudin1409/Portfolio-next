@@ -12,12 +12,11 @@ export function AboutSection() {
         <Fade direction="left" triggerOnce>
           <div className="flex justify-center">
             <Image
-              src="https://placehold.co/400x500.png"
+              src="/card.png"
               alt="M. Bahrudin"
-              width={400}
-              height={500}
-              data-ai-hint="developer portrait realistic"
-              className="object-contain w-[280px] h-auto md:w-[350px] rounded-lg"
+              width={300}
+              height={400}
+              className="object-contain w-[280px] h-auto md:w-[300px] rounded-lg"
             />
           </div>
         </Fade>
