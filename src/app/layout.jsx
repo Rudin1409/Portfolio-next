@@ -7,6 +7,7 @@ import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { Preloader } from '@/components/preloader';
 import SplashCursor from '@/components/fluid-cursor';
+import Lightning from '@/components/Lightning';
 
 const metadata = {
   title: 'Zain | Portfolio',
@@ -55,6 +56,12 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Mono&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className="antialiased">
+        <Lightning 
+          hue={355} 
+          intensity={1.2}
+          speed={0.8}
+          size={0.8}
+        />
         <SplashCursor />
         <Header />
         <main className="relative overflow-x-hidden">{children}</main>
