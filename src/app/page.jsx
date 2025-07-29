@@ -20,7 +20,7 @@ export default function Home() {
               alt="ID Card"
               width={350}
               height={450}
-              className="object-contain rounded-lg w-[280px] h-auto"
+              className="object-contain rounded-lg w-[320px] h-auto"
             />
           </div>
         </Fade>
