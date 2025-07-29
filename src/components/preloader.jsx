@@ -28,7 +28,7 @@ export function Preloader({ onEnter }) {
             <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold tracking-tighter text-foreground font-headline uppercase text-glow">
               <Typewriter
                 words={['M. BAHRUDIN']}
-                loop={1}
+                loop={true}
                 cursor
                 cursorStyle='_'
                 typeSpeed={100}
