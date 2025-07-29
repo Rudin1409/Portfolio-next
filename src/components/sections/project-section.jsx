@@ -12,12 +12,12 @@ import { TechIcon } from "@/components/tech-icons";
 
 const projects = [
   {
-    title: "AI-Powered Chatbot",
-    description: "A smart chatbot using Natural Language Processing to understand and respond to user queries in real-time.",
-    imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "chatbot interface",
-    projectUrl: "#",
-    githubUrl: "#",
+    title: "Portfolio Website",
+    description: "A personal portfolio site built with React.js, Tailwind CSS, and Vite to showcase my skills and projects.",
+    imageUrl: "/project1.png",
+    imageHint: "portfolio website",
+    projectUrl: "https://rudin1409.github.io/Portofolio_React/",
+    githubUrl: "https://github.com/Rudin1409/Portofolio_React",
   },
   {
     title: "E-Commerce Analytics Dashboard",
