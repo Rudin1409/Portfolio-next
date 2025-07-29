@@ -44,7 +44,6 @@ const certificates = [
     date: "Des 2024",
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "React certificate",
-    certificateUrl: "#",
   },
   {
     title: "Belajar Dasar Pemrograman JavaScript",
@@ -52,7 +51,6 @@ const certificates = [
     date: "Okt 2024",
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "JavaScript certificate",
-    certificateUrl: "#",
   },
   {
     title: "Junior Web Developer (BNSP)",
@@ -60,7 +58,6 @@ const certificates = [
     date: "Sep 2024",
     imageUrl: "https://placehold.co/600x400.png",
     imageHint: "BNSP certificate",
-    certificateUrl: "#",
   },
 ];
 
@@ -138,7 +135,7 @@ export function ProjectSection() {
                 <div className="space-y-12">
                     {techSkills.map(({ category, skills }) => (
                         <div key={category}>
-                            <h3 className="text-2xl font-bold text-primary mb-2">{category}</h3>
+                            <h3 className="text-2xl font-bold text-primary mb-2 text-center">{category}</h3>
                             <Separator className="bg-border mb-6" />
                             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-center">
                                 {skills.map((skill, index) => (
