@@ -15,7 +15,7 @@ export function HomeSection() {
       <div className="grid w-full items-center gap-8 md:grid-cols-2 lg:gap-12">
         <div className="space-y-6">
          <Fade direction="left" triggerOnce>
-            <Button variant="outline" className="rounded-none border-primary bg-primary/10 text-primary hover:bg-primary/20 font-headline uppercase tracking-widest">
+            <Button variant="outline" className="rounded-none border-primary bg-primary/10 text-primary hover:bg-primary/20 font-headline uppercase tracking-widest cursor-target">
                 <Sparkles className="mr-2 h-4 w-4" />
                 Innovation For the Future
             </Button>
@@ -38,23 +38,23 @@ export function HomeSection() {
             </p>
             <div className="flex flex-wrap items-center gap-4">
                 {skills.map(skill => (
-                    <Button key={skill} variant="outline" className="rounded-full bg-gray-800/50 border-gray-700 hover:bg-gray-700/50">
+                    <Button key={skill} variant="outline" className="rounded-full bg-gray-800/50 border-gray-700 hover:bg-gray-700/50 cursor-target">
                         {skill}
                     </Button>
                 ))}
             </div>
             <div className="flex items-center gap-4">
-               <Link href="https://github.com/ZainAhmadF28" target="_blank" aria-label="GitHub">
+               <Link href="https://github.com/ZainAhmadF28" target="_blank" aria-label="GitHub" className="cursor-target">
                   <div className="p-2 rounded-full bg-gray-800/50 border border-gray-700 hover:bg-gray-700/50 transition-colors">
                     <Github className="h-6 w-6 text-foreground" />
                   </div>
                </Link>
-               <Link href="#" aria-label="Instagram">
+               <Link href="#" aria-label="Instagram" className="cursor-target">
                     <div className="p-2 rounded-full bg-gray-800/50 border border-gray-700 hover:bg-gray-700/50 transition-colors">
                         <Instagram className="h-6 w-6 text-foreground" />
                     </div>
                </Link>
-               <Link href="https://www.linkedin.com/in/zain-ahmad-f/" target="_blank" aria-label="LinkedIn">
+               <Link href="https://www.linkedin.com/in/zain-ahmad-f/" target="_blank" aria-label="LinkedIn" className="cursor-target">
                   <div className="p-2 rounded-full bg-gray-800/50 border border-gray-700 hover:bg-gray-700/50 transition-colors">
                     <Linkedin className="h-6 w-6 text-foreground" />
                   </div>

@@ -36,11 +36,11 @@ export function AboutSection() {
               </p>
             </blockquote>
             <div className="flex gap-4 pt-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-headline uppercase tracking-wider">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-headline uppercase tracking-wider cursor-target">
                 <Download className="mr-2" />
                 Download CV
               </Button>
-              <Button size="lg" variant="outline" className="font-headline uppercase tracking-wider">
+              <Button size="lg" variant="outline" className="font-headline uppercase tracking-wider cursor-target">
                 <Eye className="mr-2" />
                 View Projects
               </Button>
