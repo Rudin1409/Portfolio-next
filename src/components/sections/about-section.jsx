@@ -10,10 +10,10 @@ export function AboutSection() {
         <Fade direction="left" triggerOnce>
           <div className="flex justify-center">
             <Image
-              src="https://placehold.co/500x500.png"
+              src="https://placehold.co/350x450.png"
               alt="Mascot"
-              width={500}
-              height={500}
+              width={350}
+              height={450}
               data-ai-hint="gamer mascot 3d"
               className="object-contain"
             />
