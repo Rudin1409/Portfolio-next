@@ -53,11 +53,11 @@ const certificates = [
     imageHint: "web programming certificate",
   },
   {
-    title: "Data Science",
-    issuer: "Oracle Academy",
-    date: "Mar 2024",
-    imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "data science certificate",
+    title: "Networking",
+    issuer: "IT Specialist",
+    date: "2023",
+    imageUrl: "/sertifikat/3.jpg",
+    imageHint: "networking certificate",
   },
 ];
 
