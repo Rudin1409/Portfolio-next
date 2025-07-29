@@ -47,14 +47,7 @@ export function ContactSection() {
     };
 
     return (
-        <section id="contact" className="relative py-24 bg-[#0A121A] overflow-hidden">
-            <div 
-                className="absolute inset-0 w-full h-full"
-                style={{
-                    backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px)',
-                    backgroundSize: '2rem 2rem',
-                }}
-            />
+        <section id="contact" className="relative py-24 overflow-hidden">
             <div className="relative container mx-auto px-4 md:px-6">
                 <Fade direction="up" triggerOnce>
                     <div className="text-center">
