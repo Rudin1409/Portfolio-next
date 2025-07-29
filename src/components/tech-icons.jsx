@@ -14,7 +14,7 @@ const icons = {
   Python: () => <Image src="/logo/python.png" alt="Python" width={64} height={64} data-ai-hint="python logo" />,
   Mongodb: () => <Image src="/logo/mongodb.png" alt="MongoDB" width={64} height={64} data-ai-hint="mongodb logo" />,
   Github: () => <Image src="/logo/github.png" alt="GitHub" width={64} height={64} data-ai-hint="github logo" />,
-  Vercel: () => <Image src="/logo/vercel.png" alt="Vercel" width={64} height={64} data-ai-hint="vercel logo" />,
+  Vercel: () => <Image src="/logo/varcel.png" alt="Vercel" width={64} height={64} data-ai-hint="vercel logo" />,
   Figma: () => <Image src="/logo/figma.png" alt="Figma" width={64} height={64} data-ai-hint="figma logo" />,
   Genkit: () => <Bot className="w-12 h-12" />,
   Laravel: () => <Image src="/logo/laravel.png" alt="Laravel" width={64} height={64} data-ai-hint="laravel logo" />,
