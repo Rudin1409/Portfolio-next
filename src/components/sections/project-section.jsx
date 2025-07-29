@@ -20,12 +20,12 @@ const projects = [
     githubUrl: "https://github.com/Rudin1409/Portofolio_React",
   },
   {
-    title: "E-Commerce Analytics Dashboard",
-    description: "A web app for visualizing sales data and customer behavior with interactive charts and graphs.",
-    imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "dashboard charts",
-    projectUrl: "#",
-    githubUrl: "#",
+    title: "IT-Festival 2025",
+    description: "A website for the IT-Festival 2025 event, built to provide information and registration for participants.",
+    imageUrl: "/project2.png",
+    imageHint: "event website",
+    projectUrl: "https://itfest25.vercel.app/",
+    githubUrl: "https://github.com/Rudin1409/IT-Fest-2025",
   },
   {
     title: "Portfolio Website",
