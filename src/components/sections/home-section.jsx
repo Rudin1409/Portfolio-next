@@ -66,10 +66,10 @@ export function HomeSection() {
             <Fade direction="right" triggerOnce>
                  <div className="relative">
                     <Image
-                        src="https://placehold.co/200x300.png"
+                        src="https://placehold.co/350x550.png"
                         alt="ID Card"
-                        width={200}
-                        height={300}
+                        width={350}
+                        height={550}
                         data-ai-hint="id card developer"
                         className="object-contain rounded-3xl"
                     />
