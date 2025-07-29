@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -6,6 +7,8 @@ import { Code, Award, Layers } from "lucide-react";
 import { ProjectCard } from "@/components/project-card";
 import { CertificateCard } from "@/components/certificate-card";
 import { SkillCard } from "@/components/skill-card";
+import { Separator } from "@/components/ui/separator";
+import { TechIcon } from "@/components/tech-icons";
 
 const projects = [
   {
@@ -61,15 +64,42 @@ const certificates = [
   },
 ];
 
-const skills = [
-    { name: "JavaScript", iconUrl: "https://placehold.co/80x80.png" },
-    { name: "React", iconUrl: "https://placehold.co/80x80.png" },
-    { name: "Next.js", iconUrl: "https://placehold.co/80x80.png" },
-    { name: "Node.js", iconUrl: "https://placehold.co/80x80.png" },
-    { name: "Tailwind CSS", iconUrl: "https://placehold.co/80x80.png" },
-    { name: "Figma", iconUrl: "https://placehold.co/80x80.png" },
-];
-
+const techSkills = [
+    {
+        category: "Frontend",
+        skills: [
+            { name: "React", icon: "React" },
+            { name: "Next.js", icon: "Nextjs" },
+            { name: "JavaScript", icon: "Javascript" },
+            { name: "Tailwind CSS", icon: "Tailwind" },
+            { name: "HTML5", icon: "Html5" },
+            { name: "CSS3", icon: "Css3" },
+        ]
+    },
+    {
+        category: "Backend",
+        skills: [
+            { name: "Node.js", icon: "Nodejs" },
+            { name: "Express", icon: "Express" },
+        ]
+    },
+    {
+        category: "Database",
+        skills: [
+            { name: "MongoDB", icon: "Mongodb" },
+            { name: "PostgreSQL", icon: "Postgresql" },
+        ]
+    },
+    {
+        category: "Tools",
+        skills: [
+            { name: "Git & GitHub", icon: "Github" },
+            { name: "Vercel", icon: "Vercel" },
+            { name: "Figma", icon: "Figma" },
+            { name: "Tools Lain", icon: "Tools" },
+        ]
+    },
+]
 
 const tabs = [
   { id: "projects", label: "Projects", icon: Code },
@@ -105,9 +135,19 @@ export function ProjectSection() {
       case "tech-stack":
         return (
             <Fade key="tech-stack" direction="up" triggerOnce>
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-                    {skills.map((skill, index) => (
-                        <SkillCard key={index} {...skill} />
+                <div className="space-y-12">
+                    {techSkills.map(({ category, skills }) => (
+                        <div key={category}>
+                            <h3 className="text-2xl font-bold text-primary mb-2">{category}</h3>
+                            <Separator className="bg-border mb-6" />
+                            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-center">
+                                {skills.map((skill, index) => (
+                                     <SkillCard key={index} name={skill.name}>
+                                        <TechIcon icon={skill.icon} />
+                                    </SkillCard>
+                                ))}
+                            </div>
+                        </div>
                     ))}
                 </div>
             </Fade>
