@@ -7,6 +7,11 @@ import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { Preloader } from '@/components/preloader';
 
+const metadata = {
+  title: 'Zain | Portfolio',
+  description: 'Zain Ahmad F, a passionate full-stack developer.',
+};
+
 export default function RootLayout({
   children,
 }) {
@@ -17,9 +22,10 @@ export default function RootLayout({
       setLoading(false);
     }, 3000);
 
-    // Set document title for preloader
     if (loading) {
       document.title = 'Welcome';
+    } else {
+      document.title = metadata.title;
     }
 
     return () => clearTimeout(timer);
@@ -39,17 +45,6 @@ export default function RootLayout({
       </html>
     );
   }
-
-  const metadata = {
-    title: 'Zain | Portfolio',
-    description: 'Zain Ahmad F, a passionate full-stack developer.',
-  };
-  
-  // Set document title for main content
-  useEffect(() => {
-    document.title = metadata.title;
-  }, [metadata.title]);
-
 
   return (
     <html lang="en" className="dark !scroll-smooth">
