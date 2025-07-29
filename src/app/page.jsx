@@ -3,6 +3,7 @@ import { ScrollingBanner } from '@/components/scrolling-banner';
 import { AboutSection } from '@/components/sections/about-section';
 import { StatsSection } from '@/components/sections/stats-section';
 import { ProjectSection } from '@/components/sections/project-section';
+import { SocialsSection } from '@/components/sections/socials-section';
 import { ContactSection } from '@/components/sections/contact-section';
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <AboutSection />
       <StatsSection />
       <ProjectSection />
+      <SocialsSection />
       <ContactSection />
     </div>
   );
