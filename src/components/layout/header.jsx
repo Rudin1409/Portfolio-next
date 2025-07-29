@@ -73,7 +73,7 @@ export function Header() {
         </div>
 
         {isMobileMenuOpen && (
-            <div className="absolute top-20 left-0 w-full bg-background/95 md:hidden">
+            <div className="absolute top-full left-0 w-full bg-background/95 md:hidden">
                  <nav className="flex flex-col items-center gap-6 py-6">
                   {[...navLinksLeft, ...navLinksRight].map(({ href, label }) => (
                     <Link
