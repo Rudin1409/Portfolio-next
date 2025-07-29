@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -20,6 +20,26 @@ const commentSchema = z.object({
 
 export function ContactSection() {
     const [comments, setComments] = useState([]);
+
+    useEffect(() => {
+        try {
+            const storedComments = localStorage.getItem("comments");
+            if (storedComments) {
+                setComments(JSON.parse(storedComments));
+            }
+        } catch (error) {
+            console.error("Failed to parse comments from localStorage", error);
+        }
+    }, []);
+
+    useEffect(() => {
+        try {
+            localStorage.setItem("comments", JSON.stringify(comments));
+        } catch (error) {
+            console.error("Failed to save comments to localStorage", error);
+        }
+    }, [comments]);
+
 
     const form = useForm({
         resolver: zodResolver(commentSchema),
