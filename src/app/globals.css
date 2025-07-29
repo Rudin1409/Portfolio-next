@@ -10,7 +10,28 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: #1a1a29;
   color: #f1f1f1;
+  background-image: radial-gradient(circle, #30304f 1px, transparent 1px);
+  background-size: 2rem 2rem;
+  position: relative;
 }
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--x) var(--y),
+    rgba(120, 81, 255, 0.2),
+    rgba(120, 81, 255, 0.1),
+    transparent 40%
+  );
+  z-index: 1000;
+}
+
 
 @layer base {
   :root {

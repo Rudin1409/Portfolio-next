@@ -31,6 +31,19 @@ export default function RootLayout({
     return () => clearTimeout(timer);
   }, [loading]);
 
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      document.body.style.setProperty('--x', `${e.clientX}px`);
+      document.body.style.setProperty('--y', `${e.clientY}px`);
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
   if (loading) {
     return (
       <html lang="en" className="dark !scroll-smooth">
