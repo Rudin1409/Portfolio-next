@@ -12,7 +12,7 @@ import { Eye } from "lucide-react";
 export function CertificateCard({ title, issuer, date, imageUrl, imageHint }) {
   return (
     <Dialog>
-      <div className="relative group rounded-lg overflow-hidden border border-border hover:border-primary transition-all duration-300 transform hover:-translate-y-2 cursor-target">
+      <div className="relative group rounded-lg overflow-hidden border border-border hover:border-primary transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
         <Image
           src={imageUrl}
           alt={title}
@@ -34,7 +34,7 @@ export function CertificateCard({ title, issuer, date, imageUrl, imageHint }) {
             </div>
             <h3 className="font-bold text-xl text-shadow-lg">{title}</h3>
             <DialogTrigger asChild>
-                <Button variant="secondary" className="w-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm cursor-target">
+                <Button className="w-full cursor-target">
                     <Eye className="mr-2 h-4 w-4" />
                     View Certificate
                 </Button>
