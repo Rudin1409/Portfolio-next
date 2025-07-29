@@ -28,12 +28,12 @@ const projects = [
     githubUrl: "https://github.com/Rudin1409/IT-Fest-2025",
   },
   {
-    title: "Portfolio Website",
-    description: "A personal portfolio site built with Next.js and Tailwind CSS to showcase my skills and projects.",
-    imageUrl: "https://placehold.co/600x400.png",
-    imageHint: "portfolio website",
-    projectUrl: "#",
-    githubUrl: "#",
+    title: "Tic-Tac-Toe Game",
+    description: "A classic Tic-Tac-Toe game built with React and Tailwind CSS.",
+    imageUrl: "/project3.png",
+    imageHint: "tic tac toe game",
+    projectUrl: "https://rudin1409.github.io/my-vite-Tic_tac_to_game_react/",
+    githubUrl: "https://github.com/Rudin1409/my-vite-Tic_tac_to_game_react",
   },
 ];
 
