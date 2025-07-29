@@ -3,8 +3,8 @@ import Image from "next/image";
 import { Bot, Wrench } from 'lucide-react';
 
 const icons = {
-  React: () => <Image src="https://placehold.co/64x64.png" alt="React" width={64} height={64} data-ai-hint="react logo" />,
-  Nextjs: () => <Image src="https://placehold.co/64x64.png" alt="Next.js" width={64} height={64} data-ai-hint="nextjs logo" />,
+  React: () => <Image src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" width={64} height={64} data-ai-hint="react logo" />,
+  Nextjs: () => <Image src="https://brandlogos.net/wp-content/uploads/2022/07/next.js-logo_brandlogos.net_zeccw-512x512.png" alt="Next.js" width={64} height={64} data-ai-hint="nextjs logo" />,
   Javascript: () => <Image src="https://placehold.co/64x64.png" alt="JavaScript" width={64} height={64} data-ai-hint="javascript logo" />,
   Tailwind: () => <Image src="https://placehold.co/64x64.png" alt="Tailwind CSS" width={64} height={64} data-ai-hint="tailwind css logo" />,
   Html5: () => <Image src="https://placehold.co/64x64.png" alt="HTML5" width={64} height={64} data-ai-hint="html5 logo" />,
