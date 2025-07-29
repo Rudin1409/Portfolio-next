@@ -624,6 +624,7 @@ const FluidCursor = (props) => {
 
     let lastUpdateTime = Date.now();
     let colorUpdateTimer = 0.0;
+    let animationFrameId = null;
 
     function update() {
       const dt = calcDeltaTime();
@@ -636,7 +637,7 @@ const FluidCursor = (props) => {
         step(dt);
       }
       render(null);
-      requestAnimationFrame(update);
+      animationFrameId = requestAnimationFrame(update);
     }
 
     function calcDeltaTime() {
@@ -907,46 +908,48 @@ const FluidCursor = (props) => {
       return Math.floor(input * pixelRatio);
     }
 
-    const firstMoveHandler = (e) => {
+    const mouseMoveHandler = (e) => {
         let pointer = pointers[0];
-        if (pointer.id != -1) return;
+        if (!pointer.down) {
+          let posX = scaleByPixelRatio(e.clientX);
+          let posY = scaleByPixelRatio(e.clientY);
+          updatePointerMoveData(pointer, posX, posY);
+        }
+    };
+    
+    const mouseDownHandler = (e) => {
         let posX = scaleByPixelRatio(e.clientX);
         let posY = scaleByPixelRatio(e.clientY);
-        updatePointerMoveData(pointer, posX, posY);
-        document.body.removeEventListener('mousemove', firstMoveHandler);
+        let pointer = pointers.find(p => p.id == -1);
+        if (pointer == null)
+          pointer = pointers[0];
+        updatePointerDownData(pointer, -1, posX, posY);
     };
 
-    document.body.addEventListener('mousemove', firstMoveHandler);
-    
-    document.body.addEventListener('mousemove', e => {
-        let pointer = pointers[0];
-        if (!pointer.down) return;
-        let posX = scaleByPixelRatio(e.clientX);
-        let posY = scaleByPixelRatio(e.clientY);
-        updatePointerMoveData(pointer, posX, posY);
-    });
-
-    window.addEventListener('mouseup', () => {
+    const mouseUpHandler = () => {
         updatePointerUpData(pointers[0]);
-    });
+    };
 
-    document.body.addEventListener('mouseleave', () => {
+    const mouseLeaveHandler = () => {
       updatePointerUpData(pointers[0]);
-    });
+    };
+
+    document.body.addEventListener('mousemove', mouseMoveHandler);
+    window.addEventListener('mousedown', mouseDownHandler);
+    window.addEventListener('mouseup', mouseUpHandler);
+    document.body.addEventListener('mouseleave', mouseLeaveHandler);
     
-    window.addEventListener('mousedown', (e) => {
-      let posX = scaleByPixelRatio(e.clientX);
-      let posY = scaleByPixelRatio(e.clientY);
-      let pointer = pointers.find(p => p.id == -1);
-      if (pointer == null)
-        pointer = pointers[0];
-      updatePointerDownData(pointer, -1, posX, posY);
-    });
 
     update();
 
     return () => {
-      document.body.removeEventListener('mousemove', firstMoveHandler);
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+      document.body.removeEventListener('mousemove', mouseMoveHandler);
+      window.removeEventListener('mousedown', mouseDownHandler);
+      window.removeEventListener('mouseup', mouseUpHandler);
+      document.body.removeEventListener('mouseleave', mouseLeaveHandler);
     };
 
   }, []);
@@ -959,3 +962,5 @@ const FluidCursor = (props) => {
 };
 
 export default FluidCursor;
+
+    
