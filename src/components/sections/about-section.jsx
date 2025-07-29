@@ -14,7 +14,7 @@ export function AboutSection() {
               alt="Mascot"
               width={500}
               height={500}
-              data-ai-hint="gamer mascot"
+              data-ai-hint="gamer mascot 3d"
               className="object-contain"
             />
           </div>
