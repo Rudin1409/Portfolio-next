@@ -130,7 +130,7 @@ export function ContactSection() {
                              <div className="flex items-center gap-4">
                                 <h3 className="text-2xl font-bold font-headline text-foreground">Comments ({comments.length})</h3>
                             </div>
-                            <div className="space-y-6 max-h-[300px] overflow-y-auto pr-4">
+                            <div className="space-y-6 max-h-[350px] overflow-y-auto pr-4">
                                 {comments.map((comment) => (
                                     <div key={comment.id} className="flex items-start gap-4 bg-secondary/50 p-6 rounded-lg border border-border">
                                         <Avatar>
