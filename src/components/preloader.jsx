@@ -33,7 +33,7 @@ export function Preloader({ onEnter }) {
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
         <button
           onClick={onEnter}
-          className="rounded-full border-2 border-white p-2 animate-bounce"
+          className="rounded-full border-2 border-white p-2 animate-bounce mb-4"
           aria-label="Enter website"
         >
           <ArrowDown className="h-6 w-6 text-white" />
