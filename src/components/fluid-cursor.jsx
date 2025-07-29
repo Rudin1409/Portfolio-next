@@ -962,5 +962,3 @@ const FluidCursor = (props) => {
 };
 
 export default FluidCursor;
-
-    
