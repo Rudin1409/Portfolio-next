@@ -1,3 +1,4 @@
+"use client";
 /* eslint-disable react/no-unknown-property */
 import { useRef, useEffect, forwardRef } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
@@ -103,6 +104,7 @@ precision highp float;
 uniform float colorNum;
 uniform float pixelSize;
 uniform vec2 resolution;
+uniform sampler2D inputBuffer;
 
 const float bayerMatrix8x8[64] = float[64](
   0.0/64.0, 48.0/64.0, 12.0/64.0, 60.0/64.0,  3.0/64.0, 51.0/64.0, 15.0/64.0, 63.0/64.0,
@@ -127,10 +129,10 @@ vec3 dither(vec2 uv, vec3 color) {
   return floor(color * (colorNum - 1.0) + 0.5) / (colorNum - 1.0);
 }
 
-void mainImage(in sampler2D inputBuffer, in vec2 uv, out vec4 outputColor) {
+void mainImage(const in vec4 inputColor, const in vec2 uv, out vec4 outputColor) {
   vec2 normalizedPixelSize = pixelSize / resolution;
   vec2 uvPixel = normalizedPixelSize * floor(uv / normalizedPixelSize);
-  vec4 color = texture(inputBuffer, uvPixel);
+  vec4 color = texture2D(inputBuffer, uvPixel);
   color.rgb = dither(uv, color.rgb);
   outputColor = color;
 }
@@ -145,10 +147,6 @@ class RetroEffectImpl extends Effect {
     ]);
     super("RetroEffect", ditherFragmentShader, { 
         uniforms,
-        fragmentShader: ditherFragmentShader.replace(
-            "void mainImage(in vec4 inputColor, in vec2 uv, out vec4 outputColor)",
-            "void mainImage(in sampler2D inputBuffer, in vec2 uv, out vec4 outputColor)"
-        ),
      });
     this.uniforms = uniforms;
   }
@@ -294,7 +292,7 @@ export default function Dither({
     <Canvas
       className="dither-container"
       camera={{ position: [0, 0, 6] }}
-      dpr={window.devicePixelRatio}
+      dpr={typeof window !== 'undefined' ? window.devicePixelRatio : 1}
       gl={{ antialias: true, preserveDrawingBuffer: true }}
     >
       <DitheredWaves
