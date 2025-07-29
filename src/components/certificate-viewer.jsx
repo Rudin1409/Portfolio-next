@@ -18,7 +18,7 @@ export function CertificateViewer({ isOpen, onClose, certificate, onNext, onPrev
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl bg-secondary border-primary/50 p-6">
+      <DialogContent className="max-w-2xl bg-secondary border-primary/50 p-6">
         <div className="relative">
           <DialogHeader className="mb-4 pr-10">
               <DialogTitle className="text-2xl text-foreground font-bold">{title}</DialogTitle>
