@@ -68,8 +68,8 @@ export function HomeSection() {
                     <Image
                         src="/card.png"
                         alt="ID Card"
-                        width={400}
-                        height={514}
+                        width={300}
+                        height={400}
                         className="object-contain rounded-lg"
                     />
                  </div>

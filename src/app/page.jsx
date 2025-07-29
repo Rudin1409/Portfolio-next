@@ -18,9 +18,9 @@ export default function Home() {
             <Image
               src="/card.png"
               alt="ID Card"
-              width={350}
-              height={450}
-              className="object-contain rounded-lg w-[320px] h-auto"
+              width={300}
+              height={400}
+              className="object-contain rounded-lg w-[300px] h-auto"
             />
           </div>
         </Fade>
