@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Github } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 export function ProjectCard({ title, description, imageUrl, imageHint, projectUrl, githubUrl }) {
   return (
@@ -19,7 +20,8 @@ export function ProjectCard({ title, description, imageUrl, imageHint, projectUr
       <div className="p-6">
         <h3 className="font-bold text-xl text-foreground mb-2">{title}</h3>
         <p className="text-foreground/70 text-sm mb-4 h-20 overflow-y-auto">{description}</p>
-        <div className="flex justify-between items-center pt-4">
+        <Separator className="my-4 bg-border" />
+        <div className="flex justify-between items-center">
             <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-full px-6 cursor-target">
                 <Link href={projectUrl} target="_blank">
                     View Demo
