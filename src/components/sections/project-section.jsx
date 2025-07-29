@@ -161,9 +161,8 @@ export function ProjectSection() {
     }}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-center mb-12">
-            <div className="w-4 h-8 bg-primary mr-4" />
-            <h2 className="text-5xl font-bold font-headline uppercase tracking-wider">
-                <span className="text-primary">Portfolio</span> <span className="text-foreground">Showcase</span>
+            <h2 className="text-5xl font-bold font-headline uppercase tracking-wider text-center">
+                <span className="text-foreground text-glow">Portfolio</span> <span className="text-primary">Showcase</span>
             </h2>
         </div>
 
