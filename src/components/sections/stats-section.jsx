@@ -1,3 +1,4 @@
+
 import { Code, Award, Globe } from "lucide-react";
 import { StatCard } from "@/components/stat-card";
 import { Fade } from "react-awesome-reveal";
@@ -5,13 +6,13 @@ import { Fade } from "react-awesome-reveal";
 const stats = [
   {
     icon: Code,
-    value: "5",
+    value: "3",
     title: "Total Projects",
     subtitle: "Innovative web & AI solutions",
   },
   {
     icon: Award,
-    value: "10+",
+    value: "6",
     title: "Certificates",
     subtitle: "Validated skills in tech",
   },
