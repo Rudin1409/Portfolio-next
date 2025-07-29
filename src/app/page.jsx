@@ -16,11 +16,10 @@ export default function Home() {
         <Fade direction="up" triggerOnce>
           <div className="relative">
             <Image
-              src="https://placehold.co/350x450.png"
+              src="/card.png"
               alt="ID Card"
               width={350}
               height={450}
-              data-ai-hint="id card developer"
               className="object-contain rounded-lg w-[280px] h-auto"
             />
           </div>
