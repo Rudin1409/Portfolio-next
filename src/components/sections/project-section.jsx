@@ -137,14 +137,12 @@ export function ProjectSection() {
                         <div key={category}>
                             <h3 className="text-2xl font-bold text-primary mb-2 text-center">{category}</h3>
                             <Separator className="bg-border mb-6" />
-                            <div className="flex justify-center">
-                              <div className="inline-grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-                                  {skills.map((skill, index) => (
-                                       <SkillCard key={index} name={skill.name}>
-                                          <TechIcon icon={skill.icon} />
-                                      </SkillCard>
-                                  ))}
-                              </div>
+                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                                {skills.map((skill, index) => (
+                                     <SkillCard key={index} name={skill.name}>
+                                        <TechIcon icon={skill.icon} />
+                                    </SkillCard>
+                                ))}
                             </div>
                         </div>
                     ))}
