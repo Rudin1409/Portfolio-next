@@ -1,18 +1,9 @@
 "use client";
-import { useEffect } from 'react';
 import { Github, Instagram, Linkedin, Bot, ArrowDown } from 'lucide-react';
 import LetterGlitch from './LetterGlitch';
 import { Typewriter } from 'react-simple-typewriter';
 
 export function Preloader({ onEnter }) {
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      onEnter();
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, [onEnter]);
 
   return (
     <div className="fixed inset-0 bg-[#0f1923] flex flex-col items-center justify-center z-[100] text-foreground p-8">
