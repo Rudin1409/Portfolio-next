@@ -17,7 +17,7 @@ const icons = {
   Vercel: () => <Image src="https://brandlogos.net/wp-content/uploads/2021/11/vercel-logo-512x512.png" alt="Vercel" width={64} height={64} data-ai-hint="vercel logo" />,
   Figma: () => <Image src="https://brandlogos.net/wp-content/uploads/2020/09/figma-logo-512x512.png" alt="Figma" width={64} height={64} data-ai-hint="figma logo" />,
   Genkit: () => <Bot className="w-12 h-12" />,
-  Laravel: () => <Image src="https://e7.pngegg.com/pngimages/407/190/png-clipart-laravel-new-logo-tech-companies-thumbnail.png" alt="Laravel" width={64} height={64} data-ai-hint="laravel logo" />,
+  Laravel: () => <Image src="https://brandlogos.net/wp-content/uploads/2020/09/laravel-logo-512x512.png" alt="Laravel" width={64} height={64} data-ai-hint="laravel logo" />,
   Mysql: () => <Image src="https://brandlogos.net/wp-content/uploads/2020/09/mysql-logo-512x512.png" alt="MySQL" width={64} height={64} data-ai-hint="mysql logo" />,
 };
 
