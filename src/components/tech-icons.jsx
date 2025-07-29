@@ -12,7 +12,7 @@ const icons = {
   Nodejs: () => <Image src="/logo/nodejs.png" alt="Node.js" width={64} height={64} data-ai-hint="nodejs logo" />,
   Express: () => <Image src="/logo/expresjs.png" alt="Express" width={64} height={64} data-ai-hint="express js logo" />,
   Python: () => <Image src="/logo/python.png" alt="Python" width={64} height={64} data-ai-hint="python logo" />,
-  Mongodb: () => <Image src="/logo/mongdb.png" alt="MongoDB" width={64} height={64} data-ai-hint="mongodb logo" />,
+  Mongodb: () => <Image src="/logo/mongodb.png" alt="MongoDB" width={64} height={64} data-ai-hint="mongodb logo" />,
   Github: () => <Image src="/logo/github.png" alt="GitHub" width={64} height={64} data-ai-hint="github logo" />,
   Vercel: () => <Image src="/logo/vercel.png" alt="Vercel" width={64} height={64} data-ai-hint="vercel logo" />,
   Figma: () => <Image src="/logo/figma.png" alt="Figma" width={64} height={64} data-ai-hint="figma logo" />,
