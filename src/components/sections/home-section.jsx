@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Instagram, Sparkles } from "lucide-react";
 import { Fade } from "react-awesome-reveal";
 import { Typewriter } from 'react-simple-typewriter'
+import Lanyard from '@/components/Lanyard';
 
 const skills = ["Web Dev", "AI/ML", "Next.js", "Python"];
 
@@ -64,14 +64,8 @@ export function HomeSection() {
         </div>
         <div className="hidden md:flex justify-center items-center">
             <Fade direction="right" triggerOnce>
-                 <div className="relative">
-                    <Image
-                        src="/card.png"
-                        alt="ID Card"
-                        width={300}
-                        height={400}
-                        className="object-contain rounded-lg"
-                    />
+                 <div className="relative h-[400px] w-full">
+                    <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
                  </div>
             </Fade>
         </div>
