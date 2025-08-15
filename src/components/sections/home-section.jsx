@@ -1,11 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import dynamic from 'next/dynamic';
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Instagram, Sparkles } from "lucide-react";
 import { Fade } from "react-awesome-reveal";
 import { Typewriter } from 'react-simple-typewriter'
+
+const Lanyard = dynamic(() => import('@/components/Lanyard'), {
+  ssr: false,
+  loading: () => <div className="w-[400px] h-[400px]" />,
+});
 
 const skills = ["Web Dev", "AI/ML", "Next.js", "Python"];
 
@@ -62,17 +67,8 @@ export function HomeSection() {
             </div>
             </Fade>
         </div>
-        <div className="hidden md:flex justify-center items-center">
-            <Fade direction="right" triggerOnce>
-                <Image
-                    src="https://placehold.co/400x400.png"
-                    alt="Abstract 3D"
-                    width={400}
-                    height={400}
-                    data-ai-hint="futuristic character"
-                    className="object-contain"
-                />
-            </Fade>
+        <div className="hidden md:flex justify-center items-center h-[400px]">
+          <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
         </div>
       </div>
     </section>

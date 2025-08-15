@@ -6,7 +6,7 @@ import { useGLTF, useTexture, Environment, Lightformer } from '@react-three/drei
 import { BallCollider, CuboidCollider, Physics, RigidBody, useRopeJoint, useSphericalJoint } from '@react-three/rapier';
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
 
-// replace with your own imports, see the usage snippet for details
+// IMPORTANT: Place card.glb and lanyard.png in the /public folder
 const cardGLB = "/card.glb";
 const lanyard = "/lanyard.png";
 
