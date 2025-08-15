@@ -5,7 +5,13 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Instagram, Sparkles } from "lucide-react";
 import { Fade } from "react-awesome-reveal";
 import { Typewriter } from 'react-simple-typewriter'
-import Lanyard from '@/components/Lanyard';
+import dynamic from 'next/dynamic';
+
+const Lanyard = dynamic(() => import('@/components/Lanyard'), {
+  ssr: false,
+  loading: () => <div className="relative h-[400px] w-full" />
+});
+
 
 const skills = ["Web Dev", "AI/ML", "Next.js", "Python"];
 
