@@ -5,20 +5,11 @@ import { StatsSection } from '@/components/sections/stats-section';
 import { ProjectSection } from '@/components/sections/project-section';
 import { SocialsSection } from '@/components/sections/socials-section';
 import { ContactSection } from '@/components/sections/contact-section';
-import { Fade } from 'react-awesome-reveal';
-import Lanyard from '@/components/Lanyard';
 
 export default function Home() {
   return (
     <div className="flex flex-col">
       <HomeSection />
-      <div className="md:hidden mt-8 mb-8 flex justify-center items-center h-[400px]">
-        <Fade direction="up" triggerOnce>
-          <div className="relative w-[300px] h-full">
-            <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
-          </div>
-        </Fade>
-      </div>
       <ScrollingBanner />
       <AboutSection />
       <StatsSection />
