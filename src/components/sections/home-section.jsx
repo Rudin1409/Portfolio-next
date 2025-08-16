@@ -2,18 +2,12 @@
 "use client";
 
 import Link from "next/link";
-import dynamic from 'next/dynamic';
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Instagram, Sparkles } from "lucide-react";
 import { Fade } from "react-awesome-reveal";
 import { Typewriter } from 'react-simple-typewriter'
 
 const skills = ["Web Dev", "AI/ML", "Next.js", "Python"];
-
-const Lanyard = dynamic(() => import('@/components/Lanyard'), {
-  ssr: false,
-  loading: () => <div className="w-full h-[400px]" />,
-});
 
 export function HomeSection() {
   return (
