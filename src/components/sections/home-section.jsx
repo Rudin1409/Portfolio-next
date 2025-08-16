@@ -6,8 +6,14 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Instagram, Sparkles } from "lucide-react";
 import { Fade } from "react-awesome-reveal";
 import { Typewriter } from 'react-simple-typewriter'
+import dynamic from 'next/dynamic'
 
 const skills = ["Web Dev", "AI/ML", "Next.js", "Python"];
+
+const Lanyard = dynamic(() => import('@/components/Lanyard/Lanyard'), {
+  ssr: false,
+  loading: () => <div className="w-full h-[400px]" />,
+});
 
 export function HomeSection() {
   return (
@@ -63,7 +69,7 @@ export function HomeSection() {
             </Fade>
         </div>
         <div className="hidden md:flex justify-center items-center h-[400px]">
-          {/* Lanyard component will be here */}
+          <Lanyard />
         </div>
       </div>
     </section>
