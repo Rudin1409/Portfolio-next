@@ -69,7 +69,7 @@ export function HomeSection() {
             </Fade>
         </div>
         <div className="hidden md:flex justify-center items-center h-[400px]">
-          <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+          {/* Lanyard component will be here */}
         </div>
       </div>
     </section>
