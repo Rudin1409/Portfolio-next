@@ -7,11 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Instagram, Sparkles } from "lucide-react";
 import { Fade } from "react-awesome-reveal";
 import { Typewriter } from 'react-simple-typewriter'
-
-const Lanyard = dynamic(() => import('@/components/Lanyard'), {
-  ssr: false,
-  loading: () => <div className="w-[400px] h-[400px]" />,
-});
+import Image from "next/image";
 
 const skills = ["Web Dev", "AI/ML", "Next.js", "Python"];
 
@@ -69,7 +65,14 @@ export function HomeSection() {
             </Fade>
         </div>
         <div className="hidden md:flex justify-center items-center h-[400px]">
-          <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+          <Image
+            src="https://placehold.co/400x400.png"
+            alt="Placeholder"
+            width={400}
+            height={400}
+            data-ai-hint="futuristic 3d model"
+            className="object-contain"
+          />
         </div>
       </div>
     </section>
