@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Instagram, Sparkles } from "lucide-react";
 import { Fade } from "react-awesome-reveal";
 import { Typewriter } from 'react-simple-typewriter'
-import Image from "next/image";
 
 const skills = ["Web Dev", "AI/ML", "Next.js", "Python"];
 
