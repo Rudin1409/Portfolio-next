@@ -11,6 +11,11 @@ import Image from "next/image";
 
 const skills = ["Web Dev", "AI/ML", "Next.js", "Python"];
 
+const Lanyard = dynamic(() => import('@/components/Lanyard'), {
+  ssr: false,
+  loading: () => <div className="w-full h-[400px]" />,
+});
+
 export function HomeSection() {
   return (
     <section id="home" className="container mx-auto flex min-h-[calc(100vh-5rem)] md:min-h-[calc(100vh-6rem)] max-w-7xl items-center px-4 md:px-6">
@@ -65,14 +70,7 @@ export function HomeSection() {
             </Fade>
         </div>
         <div className="hidden md:flex justify-center items-center h-[400px]">
-          <Image
-            src="https://placehold.co/400x400.png"
-            alt="Placeholder"
-            width={400}
-            height={400}
-            data-ai-hint="futuristic 3d model"
-            className="object-contain"
-          />
+          <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
         </div>
       </div>
     </section>
