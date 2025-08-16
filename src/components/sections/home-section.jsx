@@ -10,7 +10,7 @@ import dynamic from 'next/dynamic'
 
 const skills = ["Web Dev", "AI/ML", "Next.js", "Python"];
 
-const Lanyard = dynamic(() => import('@/components/Lanyard/Lanyard'), {
+const Lanyard = dynamic(() => import('@/components/Lanyard'), {
   ssr: false,
   loading: () => <div className="w-full h-[400px]" />,
 });
