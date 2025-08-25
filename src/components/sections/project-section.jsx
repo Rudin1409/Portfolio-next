@@ -15,7 +15,7 @@ const projects = [
   {
     title: "Smart POS AI",
     description: "Aplikasi Point-of-Sale (POS) modern yang terintegrasi dengan AI untuk menyederhanakan penjualan, mengelola inventaris, dan memberikan wawasan bisnis yang cerdas. Dibuat dengan teknologi web modern untuk pengalaman pengguna yang lancar.",
-    imageUrl: "/project4.png",
+    imageUrl: "/project/smartpos.png",
     imageHint: "point of sale cashier",
     projectUrl: "https://smart-pos-ai.vercel.app/",
     githubUrl: "https://github.com/Rudin1409/Smart-POS",
@@ -23,7 +23,7 @@ const projects = [
   {
     title: "SquadGoals",
     description: "Platform kolaboratif bagi mahasiswa untuk membentuk tim, mengelola proyek, dan menemukan anggota dengan keterampilan yang cocok untuk kompetisi atau tugas kuliah. Meningkatkan kerja tim dan produktivitas.",
-    imageUrl: "/project5.png",
+    imageUrl: "/project/squadgolas.png",
     imageHint: "team collaboration",
     projectUrl: "https://squadgoals-mhs.vercel.app/",
     githubUrl: "https://github.com/Rudin1409/squadgoals",
@@ -31,7 +31,7 @@ const projects = [
   {
     title: "ClassHub",
     description: "Sistem manajemen pembelajaran online yang dirancang untuk menghubungkan mahasiswa dan instruktur. Fitur termasuk berbagi materi, pengumpulan tugas, dan alat komunikasi untuk memfasilitasi pendidikan virtual.",
-    imageUrl: "/project6.png",
+    imageUrl: "/project/classhub.png",
     imageHint: "online learning platform",
     projectUrl: "https://classhub-mhs.vercel.app/landing",
     githubUrl: "https://github.com/Rudin1409/ClassHub",
@@ -39,7 +39,7 @@ const projects = [
   {
     title: "Finote",
     description: "Aplikasi manajemen keuangan pribadi yang membantu pengguna melacak pendapatan dan pengeluaran mereka. Fitur termasuk pencatatan keuangan dan pelacakan berbasis kategori untuk meningkatkan literasi keuangan.",
-    imageUrl: "/project7.png",
+    imageUrl: "/project/finote.png",
     imageHint: "personal finance app",
     projectUrl: "https://finote-mhs.vercel.app/landing",
     githubUrl: "https://github.com/Rudin1409/Finote",
@@ -47,7 +47,7 @@ const projects = [
   {
     title: "Portfolio Website",
     description: "A personal portfolio site built with React.js, Tailwind CSS, and Vite to showcase my skills and projects.",
-    imageUrl: "/project1.png",
+    imageUrl: "/project/project1.png",
     imageHint: "portfolio website",
     projectUrl: "https://rudin1409.github.io/Portofolio_React/",
     githubUrl: "https://github.com/Rudin1409/Portofolio_React",
@@ -55,7 +55,7 @@ const projects = [
   {
     title: "IT-Festival 2025",
     description: "A website for the IT-Festival 2025 event, built to provide information and registration for participants.",
-    imageUrl: "/project2.png",
+    imageUrl: "/project/project2.png",
     imageHint: "event website",
     projectUrl: "https://itfest25.vercel.app/",
     githubUrl: "https://github.com/Rudin1409/IT-Fest-2025",
@@ -63,7 +63,7 @@ const projects = [
   {
     title: "Tic-Tac-Toe Game",
     description: "A classic Tic-Tac-Toe game built with React and Tailwind CSS.",
-    imageUrl: "/project3.png",
+    imageUrl: "/project/project3.png",
     imageHint: "tic tac toe game",
     projectUrl: "https://rudin1409.github.io/my-vite-Tic_tac_to_game_react/",
     githubUrl: "https://github.com/Rudin1409/my-vite-Tic_tac_to_game_react",
