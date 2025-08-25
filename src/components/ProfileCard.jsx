@@ -323,8 +323,8 @@ const ProfileCardComponent = ({
                     />
                   </div>
                   <div className="pc-user-text">
-                    <div className="pc-handle">@{handle}</div>
-                    <div className="pc-status">{status}</div>
+                    <div className="pc-name">{name}</div>
+                    <div className="pc-title">{title}</div>
                   </div>
                 </div>
                 <button
@@ -338,12 +338,6 @@ const ProfileCardComponent = ({
                 </button>
               </div>
             )}
-          </div>
-          <div className="pc-content">
-            <div className="pc-details">
-              <h3>{name}</h3>
-              <p>{title}</p>
-            </div>
           </div>
         </div>
       </section>

@@ -250,17 +250,17 @@
   gap: 6px;
 }
 
-.pc-handle {
-  font-size: 14px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1;
+.pc-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.1;
 }
 
-.pc-status {
-  font-size: 14px;
+.pc-title {
+  font-size: 13px;
   color: rgba(255, 255, 255, 0.7);
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .pc-contact-btn {
@@ -291,41 +291,6 @@
   mix-blend-mode: luminosity;
 }
 
-.pc-details {
-  width: 100%;
-  position: absolute;
-  top: 3em;
-  display: flex;
-  flex-direction: column;
-}
-
-.pc-details h3 {
-  font-weight: 600;
-  margin: 0;
-  font-size: min(5svh, 3em);
-  margin: 0;
-  background-image: linear-gradient(to bottom, #fff, #6f6fbe);
-  background-size: 1em 1.5em;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-
-.pc-details p {
-  font-weight: 600;
-  position: relative;
-  top: -12px;
-  white-space: nowrap;
-  font-size: 16px;
-  margin: 0 auto;
-  width: min-content;
-  background-image: linear-gradient(to bottom, #fff, #4a4ac0);
-  background-size: 1em 1.5em;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-
 @keyframes glow-bg {
   0% {
     --bgrotate: 0deg;
@@ -352,18 +317,6 @@
     max-height: 450px;
   }
 
-  .pc-details {
-    top: 2em;
-  }
-
-  .pc-details h3 {
-    font-size: min(4svh, 2.5em);
-  }
-
-  .pc-details p {
-    font-size: 14px;
-  }
-
   .pc-user-info {
     bottom: 15px;
     left: 15px;
@@ -372,45 +325,32 @@
   }
 
   .pc-mini-avatar {
-    width: 28px;
-    height: 28px;
+    width: 40px;
+    height: 40px;
   }
 
   .pc-user-details {
     gap: 10px;
   }
 
-  .pc-handle {
-    font-size: 13px;
+  .pc-name {
+    font-size: 14px;
   }
 
-  .pc-status {
-    font-size: 10px;
+  .pc-title {
+    font-size: 11px;
   }
 
   .pc-contact-btn {
     padding: 6px 12px;
-    font-size: 11px;
+    font-size: 12px;
   }
 }
 
 @media (max-width: 480px) {
   .pc-card {
     height: 60svh;
-    max-height: 380px;
-  }
-
-  .pc-details {
-    top: 1.5em;
-  }
-
-  .pc-details h3 {
-    font-size: min(3.5svh, 2em);
-  }
-
-  .pc-details p {
-    font-size: 12px;
-    top: -8px;
+    max-height: 400px;
   }
 
   .pc-user-info {
@@ -422,20 +362,20 @@
   }
 
   .pc-mini-avatar {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
   }
 
   .pc-user-details {
     gap: 8px;
   }
 
-  .pc-handle {
+  .pc-name {
     font-size: 12px;
   }
 
-  .pc-status {
-    font-size: 9px;
+  .pc-title {
+    font-size: 10px;
   }
 
   .pc-contact-btn {
@@ -451,34 +391,26 @@
     max-height: 320px;
   }
 
-  .pc-details h3 {
-    font-size: min(3svh, 1.5em);
-  }
-
-  .pc-details p {
-    font-size: 11px;
-  }
-
   .pc-user-info {
     padding: 6px 8px;
     border-radius: 50px;
   }
 
   .pc-mini-avatar {
-    width: 20px;
-    height: 20px;
+    width: 28px;
+    height: 28px;
   }
 
   .pc-user-details {
     gap: 6px;
   }
 
-  .pc-handle {
+  .pc-name {
     font-size: 11px;
   }
 
-  .pc-status {
-    font-size: 8px;
+  .pc-title {
+    font-size: 9px;
   }
 
   .pc-contact-btn {
