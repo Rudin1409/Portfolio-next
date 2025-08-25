@@ -57,7 +57,7 @@ const projects = [
     description: "A website for the IT-Festival 2025 event, built to provide information and registration for participants.",
     imageUrl: "/project/project2.png",
     imageHint: "event website",
-    projectUrl: "https://itfest25.vercel.app/",
+    projectUrl: "https://it-fest-2025-pi.vercel.app/",
     githubUrl: "https://github.com/Rudin1409/IT-Fest-2025",
   },
   {
