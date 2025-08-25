@@ -10,8 +10,8 @@ export function ProjectCard({ title, description, imageUrl, imageHint, projectUr
     <ElectricBorder
       color="#ff4655"
       speed={1}
-      chaos={0.5}
-      thickness={1}
+      chaos={0.8}
+      thickness={2}
       style={{ borderRadius: '0.5rem' }}
       className="transition-transform duration-300 hover:transform hover:-translate-y-2 cursor-target"
     >
