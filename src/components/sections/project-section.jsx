@@ -14,7 +14,7 @@ import { TechIcon } from "@/components/tech-icons";
 const projects = [
   {
     title: "Smart POS AI",
-    description: "A modern Point-of-Sale (POS) application integrated with AI to streamline sales, manage inventory, and provide intelligent business insights. Built with modern web technologies for a seamless user experience.",
+    description: "Aplikasi Point-of-Sale (POS) modern yang terintegrasi dengan AI untuk menyederhanakan penjualan, mengelola inventaris, dan memberikan wawasan bisnis yang cerdas. Dibuat dengan teknologi web modern untuk pengalaman pengguna yang lancar.",
     imageUrl: "/project4.png",
     imageHint: "point of sale cashier",
     projectUrl: "https://smart-pos-ai.vercel.app/",
@@ -22,7 +22,7 @@ const projects = [
   },
   {
     title: "SquadGoals",
-    description: "A collaborative platform for students to form teams, manage projects, and find members with matching skills for competitions or coursework. Enhances teamwork and productivity.",
+    description: "Platform kolaboratif bagi mahasiswa untuk membentuk tim, mengelola proyek, dan menemukan anggota dengan keterampilan yang cocok untuk kompetisi atau tugas kuliah. Meningkatkan kerja tim dan produktivitas.",
     imageUrl: "/project5.png",
     imageHint: "team collaboration",
     projectUrl: "https://squadgoals-mhs.vercel.app/",
@@ -30,7 +30,7 @@ const projects = [
   },
   {
     title: "ClassHub",
-    description: "An online learning management system designed to connect students and instructors. Features include material sharing, assignment submissions, and communication tools to facilitate virtual education.",
+    description: "Sistem manajemen pembelajaran online yang dirancang untuk menghubungkan mahasiswa dan instruktur. Fitur termasuk berbagi materi, pengumpulan tugas, dan alat komunikasi untuk memfasilitasi pendidikan virtual.",
     imageUrl: "/project6.png",
     imageHint: "online learning platform",
     projectUrl: "https://classhub-mhs.vercel.app/landing",
@@ -38,7 +38,7 @@ const projects = [
   },
   {
     title: "Finote",
-    description: "A personal finance management application that helps users track their income and expenses. Features include financial note-taking and category-based tracking to improve financial literacy.",
+    description: "Aplikasi manajemen keuangan pribadi yang membantu pengguna melacak pendapatan dan pengeluaran mereka. Fitur termasuk pencatatan keuangan dan pelacakan berbasis kategori untuk meningkatkan literasi keuangan.",
     imageUrl: "/project7.png",
     imageHint: "personal finance app",
     projectUrl: "https://finote-mhs.vercel.app/landing",
@@ -279,3 +279,5 @@ export function ProjectSection() {
     </section>
   );
 }
+
+    
