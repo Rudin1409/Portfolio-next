@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -20,7 +19,7 @@ export function AboutSection() {
               handle="bahrudin.dev"
               status="Online"
               contactText="Contact Me"
-              avatarUrl="/card.png"
+              avatarUrl="/M Bahrudin.png"
               showUserInfo={true}
               enableTilt={true}
               onContactClick={() => {
