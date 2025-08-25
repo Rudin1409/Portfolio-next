@@ -6,7 +6,7 @@ import { Fade } from "react-awesome-reveal";
 const stats = [
   {
     icon: Code,
-    value: "3",
+    value: "7",
     title: "Total Projects",
     subtitle: "Innovative web & AI solutions",
   },
