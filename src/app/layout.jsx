@@ -35,7 +35,7 @@ export default function RootLayout({
     return (
       <html lang="en" className="dark !scroll-smooth">
         <head>
-          <link rel="icon" href="/logo/logo.png" type="image/png" sizes="any" />
+          <link rel="icon" href="/logo/logonew.jpeg" type="image/jpeg" sizes="any" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
           <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Roboto+Mono&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -52,7 +52,7 @@ export default function RootLayout({
     <html lang="en" className="dark !scroll-smooth">
       <head>
         <meta name="description" content={metadata.description} />
-        <link rel="icon" href="/logo/logo.png" type="image/png" sizes="any" />
+        <link rel="icon" href="/logo/logonew.jpeg" type="image/jpeg" sizes="any" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto+Mono&family=Teko:wght@400;500;600;700&display=swap" rel="stylesheet" />
