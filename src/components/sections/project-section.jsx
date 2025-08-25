@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -55,7 +54,7 @@ const projects = [
   {
     title: "IT-Festival 2025",
     description: "A website for the IT-Festival 2025 event, built to provide information and registration for participants.",
-    imageUrl: "/project/project2.png",
+    imageUrl: "/project/project2new.png",
     imageHint: "event website",
     projectUrl: "https://it-fest-2025-pi.vercel.app/",
     githubUrl: "https://github.com/Rudin1409/IT-Fest-2025",
