@@ -1,9 +1,9 @@
-
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Download, Eye } from "lucide-react";
 import { Fade } from "react-awesome-reveal";
+import ProfileCard from "@/components/ProfileCard";
+import "./../ProfileCard.css";
 
 export function AboutSection() {
   return (
@@ -11,12 +11,21 @@ export function AboutSection() {
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <Fade direction="left" triggerOnce>
           <div className="flex justify-center">
-            <Image
-              src="/card.png"
-              alt="M. Bahrudin"
-              width={300}
-              height={400}
-              className="object-contain w-[280px] h-auto md:w-[300px] rounded-lg"
+            <ProfileCard
+              name="M. Bahrudin"
+              title="Web & AI Enthusiast"
+              handle="bahrudin.dev"
+              status="Online"
+              contactText="Contact Me"
+              avatarUrl="/card.png"
+              showUserInfo={true}
+              enableTilt={true}
+              onContactClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             />
           </div>
         </Fade>
