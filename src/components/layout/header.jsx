@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
@@ -10,12 +11,6 @@ const navLinks = [
   { href: "#projects", label: "Project" },
   { href: "#contact", label: "Contact" },
 ];
-
-const MLogo = () => (
-    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4 20V4h2l8 6 8-6h2v16" stroke="hsl(var(--primary))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-    </svg>
-)
 
 export function Header() {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -41,7 +36,7 @@ export function Header() {
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
             <Link href="#home" className="flex items-center gap-2 cursor-target">
                 <div className="hidden md:block">
-                    <MLogo />
+                    <Image src="/logo/logo.png" alt="Logo" width={40} height={40} data-ai-hint="logo" />
                 </div>
                 <div className="flex flex-col text-center md:text-left">
                     <span className="text-lg md:text-xl font-bold text-foreground tracking-wider font-headline">M. BAHRUDIN</span>
@@ -60,7 +55,7 @@ export function Header() {
         
         <div className="md:hidden flex-1">
              <Link href="#home" className="flex items-center gap-2 cursor-target">
-                <MLogo />
+                <Image src="/logo/logo.png" alt="Logo" width={40} height={40} data-ai-hint="logo" />
             </Link>
         </div>
         <div className="md:hidden">
