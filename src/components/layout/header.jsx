@@ -2,9 +2,9 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-import { Menu, X, Bot } from "lucide-react";
-import { useState } from "react";
+import { Bot, Menu, X } from "lucide-react";
+import { useState, useEffect } from "react";
+import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "#home", label: "Home" },
@@ -15,6 +15,23 @@ const navLinks = [
 
 export function Header() {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState("home");
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = navLinks.map(link => document.getElementById(link.href.substring(1)));
+            const scrollPosition = window.scrollY + 150;
+
+            sections.forEach(section => {
+                if (section && scrollPosition >= section.offsetTop && scrollPosition < section.offsetTop + section.offsetHeight) {
+                    setActiveSection(section.id);
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
   return (
     <header className="sticky top-0 z-50 w-full">
@@ -28,7 +45,14 @@ export function Header() {
         
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.slice(0, 2).map(({ href, label }) => (
-            <Link key={href} href={href} className="text-base md:text-lg font-headline font-semibold uppercase tracking-wider transition-colors hover:text-primary text-foreground cursor-target">
+            <Link 
+              key={href} 
+              href={href} 
+              className={cn(
+                "text-base md:text-lg font-headline font-semibold uppercase tracking-wider transition-colors hover:text-primary text-foreground cursor-target",
+                activeSection === href.substring(1) && "text-primary"
+              )}
+            >
               {label}
             </Link>
           ))}
@@ -48,7 +72,14 @@ export function Header() {
 
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.slice(2).map(({ href, label }) => (
-            <Link key={href} href={href} className="text-base md:text-lg font-headline font-semibold uppercase tracking-wider transition-colors hover:text-primary text-foreground cursor-target">
+            <Link 
+              key={href} 
+              href={href} 
+              className={cn(
+                "text-base md:text-lg font-headline font-semibold uppercase tracking-wider transition-colors hover:text-primary text-foreground cursor-target",
+                activeSection === href.substring(1) && "text-primary"
+              )}
+            >
               {label}
             </Link>
           ))}
