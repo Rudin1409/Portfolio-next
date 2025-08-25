@@ -1,6 +1,6 @@
+
 "use client";
 
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Download, Eye } from "lucide-react";
 import { Fade } from "react-awesome-reveal";
@@ -17,16 +17,10 @@ export function AboutSection() {
               name="M. Bahrudin"
               title="Web & AI Enthusiast"
               handle="bahrudin.dev"
-              status="Online"
-              contactText="Contact Me"
               avatarUrl="/M Bahrudin.png"
-              showUserInfo={true}
               enableTilt={true}
               onContactClick={() => {
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' });
-                }
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
               }}
             />
           </div>
@@ -48,15 +42,17 @@ export function AboutSection() {
               </p>
             </blockquote>
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-headline uppercase tracking-wider cursor-target">
-                <Download className="mr-2" />
-                Download CV
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-headline uppercase tracking-wider cursor-target">
+                <a href="/CV M Bahrudin.pdf" download>
+                  <Download className="mr-2" />
+                  Download CV
+                </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="font-headline uppercase tracking-wider cursor-target">
-                <Link href="#projects">
+                <a href="#projects">
                   <Eye className="mr-2" />
                   View Projects
-                </Link>
+                </a>
               </Button>
             </div>
           </div>
