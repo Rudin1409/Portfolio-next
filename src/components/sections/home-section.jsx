@@ -6,20 +6,17 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Instagram, Sparkles } from "lucide-react";
 import { Fade } from "react-awesome-reveal";
 import { Typewriter } from 'react-simple-typewriter'
-import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic';
+
+const Lanyard = dynamic(() => import('@/components/Lanyard'), { ssr: false });
 
 const skills = ["Web Dev", "AI/ML", "Next.js", "Python"];
 
-const Lanyard = dynamic(() => import('@/components/Lanyard/Lanyard'), {
-  ssr: false,
-  loading: () => <div className="w-full h-[400px]" />,
-});
-
 export function HomeSection() {
   return (
-    <section id="home" className="container mx-auto flex min-h-[calc(100vh-5rem)] md:min-h-[calc(100vh-6rem)] max-w-7xl items-center px-4 md:px-6">
+    <section id="home" className="relative container mx-auto flex min-h-[calc(100vh-5rem)] md:min-h-[calc(100vh-6rem)] max-w-7xl items-center px-4 md:px-6">
       <div className="grid w-full items-center gap-8 md:grid-cols-2 lg:gap-12">
-        <div className="space-y-6">
+        <div className="space-y-6 z-10">
          <Fade direction="left" triggerOnce>
             <Button variant="outline" className="rounded-none border-primary bg-primary/10 text-primary hover:bg-primary/20 font-headline uppercase tracking-widest cursor-target">
                 <Sparkles className="mr-2 h-4 w-4" />
@@ -68,8 +65,8 @@ export function HomeSection() {
             </div>
             </Fade>
         </div>
-        <div className="hidden md:flex justify-center items-center h-[400px]">
-          <Lanyard />
+        <div className="hidden md:flex justify-center items-center h-full absolute top-0 left-0 w-full">
+            <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
         </div>
       </div>
     </section>
