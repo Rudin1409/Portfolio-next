@@ -13,6 +13,38 @@ import { TechIcon } from "@/components/tech-icons";
 
 const projects = [
   {
+    title: "Smart POS AI",
+    description: "A modern Point-of-Sale (POS) application integrated with AI to streamline sales, manage inventory, and provide intelligent business insights. Built with modern web technologies for a seamless user experience.",
+    imageUrl: "/project4.png",
+    imageHint: "point of sale cashier",
+    projectUrl: "https://smart-pos-ai.vercel.app/",
+    githubUrl: "https://github.com/Rudin1409/Smart-POS",
+  },
+  {
+    title: "SquadGoals",
+    description: "A collaborative platform for students to form teams, manage projects, and find members with matching skills for competitions or coursework. Enhances teamwork and productivity.",
+    imageUrl: "/project5.png",
+    imageHint: "team collaboration",
+    projectUrl: "https://squadgoals-mhs.vercel.app/",
+    githubUrl: "https://github.com/Rudin1409/squadgoals",
+  },
+  {
+    title: "ClassHub",
+    description: "An online learning management system designed to connect students and instructors. Features include material sharing, assignment submissions, and communication tools to facilitate virtual education.",
+    imageUrl: "/project6.png",
+    imageHint: "online learning platform",
+    projectUrl: "https://classhub-mhs.vercel.app/landing",
+    githubUrl: "https://github.com/Rudin1409/ClassHub",
+  },
+  {
+    title: "Finote",
+    description: "A personal finance management application that helps users track their income and expenses. Features include financial note-taking and category-based tracking to improve financial literacy.",
+    imageUrl: "/project7.png",
+    imageHint: "personal finance app",
+    projectUrl: "https://finote-mhs.vercel.app/landing",
+    githubUrl: "https://github.com/Rudin1409/Finote",
+  },
+  {
     title: "Portfolio Website",
     description: "A personal portfolio site built with React.js, Tailwind CSS, and Vite to showcase my skills and projects.",
     imageUrl: "/project1.png",
