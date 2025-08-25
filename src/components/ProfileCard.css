@@ -158,6 +158,7 @@
   background-blend-mode: color-dodge;
   filter: brightness(calc(2 - var(--pointer-from-center))) contrast(calc(var(--pointer-from-center) + 2)) saturate(calc(0.5 + var(--pointer-from-center)));
   mix-blend-mode: luminosity;
+  opacity: 0 !important; /* Disables the over-the-top inner hover effect */
 }
 
 .pc-shine::after {
@@ -165,6 +166,7 @@
   background-size: 200% 300%, 700% 700%, 100% 100%;
   mix-blend-mode: difference;
   filter: brightness(0.8) contrast(1.5);
+  opacity: 0 !important; /* Disables the over-the-top inner hover effect */
 }
 
 .pc-glare {
