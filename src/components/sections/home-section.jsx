@@ -65,8 +65,8 @@ export function HomeSection() {
             </div>
             </Fade>
         </div>
-        <div className="hidden md:flex justify-center items-center h-full absolute top-0 left-0 w-full">
-            <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+        <div className="hidden md:flex justify-end items-center h-full absolute top-0 left-0 w-full pr-24">
+            <Lanyard position={[0, 0, 15]} gravity={[0, -40, 0]} />
         </div>
       </div>
     </section>
