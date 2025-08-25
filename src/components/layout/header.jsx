@@ -1,8 +1,9 @@
+
 "use client";
 
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Bot } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
@@ -35,8 +36,8 @@ export function Header() {
 
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
             <Link href="#home" className="flex items-center gap-2 cursor-target">
-                <div className="hidden md:block">
-                    <Image src="/logo/logo.png" alt="Logo" width={40} height={40} data-ai-hint="logo" />
+                <div className="hidden md:block text-primary">
+                    <Bot className="h-10 w-10" />
                 </div>
                 <div className="flex flex-col text-center md:text-left">
                     <span className="text-lg md:text-xl font-bold text-foreground tracking-wider font-headline">M. BAHRUDIN</span>
@@ -54,8 +55,8 @@ export function Header() {
         </nav>
         
         <div className="md:hidden flex-1">
-             <Link href="#home" className="flex items-center gap-2 cursor-target">
-                <Image src="/logo/logo.png" alt="Logo" width={40} height={40} data-ai-hint="logo" />
+             <Link href="#home" className="flex items-center gap-2 cursor-target text-primary">
+                <Bot className="h-10 w-10" />
             </Link>
         </div>
         <div className="md:hidden">
